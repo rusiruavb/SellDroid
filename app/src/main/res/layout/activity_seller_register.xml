@@ -30,6 +30,8 @@
                 android:padding="15dp"
                 android:layout_margin="10dp"
                 android:hint="Enter Your Name"
+                android:maxLines="1"
+                android:inputType="text"
                 android:id="@+id/seller_register_name"/>
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -37,6 +39,8 @@
                 android:padding="15dp"
                 android:layout_margin="10dp"
                 android:hint="Enter Your Email Address"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
                 android:id="@+id/seller_register_email"/>
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/seller_shop_name"
@@ -44,6 +48,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="Enter Company/Shop Name"
+                android:maxLines="1"
+                android:inputType="text"
                 android:padding="15dp" />
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -51,6 +57,8 @@
                 android:padding="15dp"
                 android:layout_margin="10dp"
                 android:hint="Enter Company/Shop Address"
+                android:maxLines="1"
+                android:inputType="text"
                 android:id="@+id/seller_shop_address"/>
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -59,6 +67,7 @@
                 android:layout_margin="10dp"
                 android:inputType="number"
                 android:hint="Phone Number"
+                android:maxLines="1"
                 android:id="@+id/seller_register_pNumber"/>
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -66,6 +75,7 @@
                 android:padding="15dp"
                 android:layout_margin="10dp"
                 android:inputType="textPassword"
+                android:maxLines="1"
                 android:hint="Enter Password"
                 android:id="@+id/seller_register_password"/>
             <com.google.android.material.textfield.TextInputEditText
@@ -74,6 +84,7 @@
                 android:padding="15dp"
                 android:layout_margin="10dp"
                 android:inputType="textPassword"
+                android:maxLines="1"
                 android:hint="Conform Password"
                 android:id="@+id/seller_register_conformPassword"/>
             <Button

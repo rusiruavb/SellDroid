@@ -30,13 +30,16 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:padding="15dp"
+                android:maxLines="1"
                 android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:id="@+id/login_email"/>
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:padding="15dp"
+                android:maxLines="1"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:id="@+id/login_password"/>

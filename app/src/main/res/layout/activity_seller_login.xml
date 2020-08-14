@@ -31,6 +31,8 @@
                 android:layout_margin="10dp"
                 android:padding="15dp"
                 android:hint="Email"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
                 android:id="@+id/login_seller_email"/>
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -39,6 +41,7 @@
                 android:padding="15dp"
                 android:hint="Password"
                 android:inputType="textPassword"
+                android:maxLines="1"
                 android:id="@+id/login_seller_password"/>
             <Button
                 android:layout_width="match_parent"

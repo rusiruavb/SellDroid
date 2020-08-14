@@ -33,6 +33,8 @@
                 android:padding="15dp"
                 android:layout_margin="10dp"
                 android:hint="Your Name"
+                android:inputType="text"
+                android:maxLines="1"
                 android:id="@+id/register_name"/>
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -40,6 +42,8 @@
                 android:padding="15dp"
                 android:layout_margin="10dp"
                 android:hint="Your Email Address"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
                 android:id="@+id/register_email"/>
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -48,6 +52,7 @@
                 android:layout_margin="10dp"
                 android:inputType="number"
                 android:hint="Phone Number"
+                android:maxLines="1"
                 android:id="@+id/register_pNumber"/>
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -56,6 +61,7 @@
                 android:layout_margin="10dp"
                 android:inputType="textPassword"
                 android:hint="Enter Password"
+                android:maxLines="1"
                 android:id="@+id/register_password"/>
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -64,6 +70,7 @@
                 android:layout_margin="10dp"
                 android:inputType="textPassword"
                 android:hint="Conform Password"
+                android:maxLines="1"
                 android:id="@+id/register_conformPassword"/>
             <Button
                 android:layout_width="match_parent"
