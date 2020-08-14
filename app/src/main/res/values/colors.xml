@@ -6,4 +6,5 @@
 
     <color name="textColor">#000000</color>
     <color name="buttonBgColor">#00BCD4</color>
+    <color name="buttonDeleteBgColor">#E8582B</color>
 </resources>

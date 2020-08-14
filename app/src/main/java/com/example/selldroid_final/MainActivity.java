@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seller_register);
+        setContentView(R.layout.activity_set_new_user_password);
         progress = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
         // check user already logged in

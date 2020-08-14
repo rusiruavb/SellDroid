@@ -1,14 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".UserProfileUpdate">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Update User Profile Fragment" />
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update My Profile"
+                android:textColor="@color/textColor"
+                android:textSize="32dp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:hint="Name"
+                android:maxLines="1"
+                android:inputType="text"
+                android:id="@+id/update_user_name"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:hint="Email Address"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
+                android:id="@+id/update_user_email"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_user_phoneNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Phone Number"
+                android:maxLines="1"
+                android:inputType="text"
+                android:padding="15dp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:hint="Password"
+                android:maxLines="1"
+                android:inputType="text"
+                android:id="@+id/update_user_password"/>
 
-</FrameLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:textSize="18dp"
+                android:background="@drawable/button_background"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:padding="15dp"
+                android:id="@+id/update_user_button"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DELETE ACCOUNT"
+                android:textSize="18dp"
+                android:background="@drawable/button_delete_background"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:padding="15dp"
+                android:id="@+id/delete_user_account"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CANCEL UPDATE"
+                android:gravity="center"
+                android:id="@+id/cancel_user_update"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
