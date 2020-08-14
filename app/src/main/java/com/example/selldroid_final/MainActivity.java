@@ -39,66 +39,66 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_set_new_user_password);
         progress = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
         // check user already logged in
-        if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), UserHome.class));
-        }
-        userLogin();
+//        if (mAuth.getCurrentUser() != null) {
+//            startActivity(new Intent(getApplicationContext(), UserHome.class));
+//        }
+       // userLogin();
     }
 
-    private void userLogin() {
-        loginEmail = findViewById(R.id.login_email);
-        loginPassword = findViewById(R.id.login_password);
-        loginButton = findViewById(R.id.login_button);
-        forgetPassword = findViewById(R.id.foget_password);
-        createAccount = findViewById(R.id.create_account);
-
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String email = loginEmail.getText().toString().trim();
-                String password = loginPassword.getText().toString().trim();
-
-                // validation
-                if (TextUtils.isEmpty(email)) {
-                    loginEmail.setError("Email is Required");
-                    return;
-                }
-                if (TextUtils.isEmpty(password)) {
-                    loginPassword.setError("Password is Required");
-                    return;
-                }
-
-                progress.setMessage("Login in...");
-                progress.show();
-
-                // database connection and check user
-                mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            progress.dismiss();
-                            Toast.makeText(getApplicationContext(),"Login Susccessful",Toast.LENGTH_SHORT).show();
-                            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                            transaction.replace(R.id.main_frame,mFragment);
-                            transaction.commit();
-                        } else {
-                            progress.dismiss();
-                            Toast.makeText(getApplicationContext(),"Email or Password was Incorrect",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-            }
-        });
-
-        createAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), UserRegister.class));
-            }
-        });
-    }
+//    private void userLogin() {
+//        loginEmail = findViewById(R.id.login_email);
+//        loginPassword = findViewById(R.id.login_password);
+//        loginButton = findViewById(R.id.login_button);
+//        forgetPassword = findViewById(R.id.foget_password);
+//        createAccount = findViewById(R.id.create_account);
+//
+//        loginButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String email = loginEmail.getText().toString().trim();
+//                String password = loginPassword.getText().toString().trim();
+//
+//                // validation
+//                if (TextUtils.isEmpty(email)) {
+//                    loginEmail.setError("Email is Required");
+//                    return;
+//                }
+//                if (TextUtils.isEmpty(password)) {
+//                    loginPassword.setError("Password is Required");
+//                    return;
+//                }
+//
+//                progress.setMessage("Login in...");
+//                progress.show();
+//
+//                // database connection and check user
+//                mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (task.isSuccessful()) {
+//                            progress.dismiss();
+//                            Toast.makeText(getApplicationContext(),"Login Susccessful",Toast.LENGTH_SHORT).show();
+//                            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                            transaction.replace(R.id.main_frame,mFragment);
+//                            transaction.commit();
+//                        } else {
+//                            progress.dismiss();
+//                            Toast.makeText(getApplicationContext(),"Email or Password was Incorrect",Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
+//            }
+//        });
+//
+//        createAccount.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(getApplicationContext(), UserRegister.class));
+//            }
+//        });
+//    }
 }
