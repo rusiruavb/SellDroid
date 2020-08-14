@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="Loading..."
+        android:text="Nimal Jayaweera"
         android:textColor="@color/textColor"
         android:textFontWeight="900"
         android:textSize="24sp"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="6dp"
-        android:text="Loading..."
+        android:text="nimal@gamil.com"
         android:textColor="@color/textColor"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/user_image"
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="6dp"
-        android:text="Loading..."
+        android:text="0775563254"
         android:textColor="@color/textColor"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/user_image"
@@ -52,7 +52,7 @@
 
 
 
-    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+    <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/user_image"
         android:layout_width="wrap_content"

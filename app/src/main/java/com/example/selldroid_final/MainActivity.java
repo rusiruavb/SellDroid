@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_user_profile_update);
+        setContentView(R.layout.fragment_user_profile);
         progress = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
         // check user already logged in
