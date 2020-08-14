@@ -1,14 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateProduct">
+    android:gravity="center"
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Update Product fragment" />
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="Update Product Details"
+                android:textStyle="bold"
+                android:textSize="36dp"
+                android:textColor="@color/textColor"/>
 
-</FrameLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:maxLines="1"
+                android:hint="Product Name"
+                android:inputType="text"
+                android:id="@+id/update_product_name"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:maxLines="1"
+                android:hint="Price"
+                android:inputType="number"
+                android:id="@+id/update_product_price"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:maxLines="1"
+                android:hint="Quantity"
+                android:inputType="number"
+                android:id="@+id/update_product_quantity"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_add_product"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UPDATE PRODUCT"
+                android:textSize="18dp"
+                android:background="@drawable/button_background"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:padding="15dp"
+                android:id="@+id/update_product_button"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DELETE PRODUCT"
+                android:textSize="18dp"
+                android:background="@drawable/button_background"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:padding="15dp"
+                android:id="@+id/update_product_button1"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
