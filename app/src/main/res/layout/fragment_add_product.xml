@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:text="Login"
+                android:text="Add Product"
                 android:textStyle="bold"
                 android:textSize="36dp"
                 android:textColor="@color/textColor"/>
