@@ -30,22 +30,37 @@
                 android:layout_margin="10dp"
                 android:padding="15dp"
                 android:maxLines="1"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:id="@+id/login_email"/>
+                android:hint="Product Name"
+                android:inputType="text"
+                android:id="@+id/add_product_name"/>
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:padding="15dp"
                 android:maxLines="1"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:id="@+id/login_password"/>
+                android:hint="Price"
+                android:inputType="number"
+                android:id="@+id/add_product_price"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:maxLines="1"
+                android:hint="Quantity"
+                android:inputType="number"
+                android:id="@+id/add_product_quantity"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_add_product"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="LOGIN"
+                android:text="add product"
                 android:textSize="18dp"
                 android:background="@drawable/button_background"
                 android:layout_margin="10dp"
@@ -55,24 +70,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login to Seller Account"
+                android:text="CANCEL"
                 android:padding="5dp"
                 android:gravity="center"
                 android:id="@+id/login_as_seller"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Foget Password"
-                android:padding="5dp"
-                android:gravity="center"
-                android:id="@+id/foget_password"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Create a new Account"
-                android:padding="5dp"
-                android:gravity="center"
-                android:id="@+id/create_account"/>
         </LinearLayout>
 
     </ScrollView>
