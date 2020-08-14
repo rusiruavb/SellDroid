@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="Login"
+                android:textStyle="bold"
+                android:textSize="36dp"
+                android:textColor="@color/textColor"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:hint="Email"
+                android:id="@+id/login_email"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:id="@+id/login_password"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:textSize="18dp"
+                android:background="@drawable/button_background"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:padding="15dp"
+                android:id="@+id/login_button"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login to Seller Account"
+                android:padding="5dp"
+                android:gravity="center"
+                android:id="@+id/login_as_seller"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Foget Password"
+                android:padding="5dp"
+                android:gravity="center"
+                android:id="@+id/foget_password"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create a new Account"
+                android:padding="5dp"
+                android:gravity="center"
+                android:id="@+id/create_account"/>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

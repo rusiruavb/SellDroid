@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="General">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:title="Home"
+                android:icon="@drawable/ic_home"/>
+            <item
+                android:id="@+id/nav_seller_account"
+                android:title="My Seller Account"
+                android:icon="@drawable/ic_user_account"/>
+            <item
+                android:id="@+id/nav_seller_account_update"
+                android:title="Update Seller Profile"
+                android:icon="@drawable/ic_update_user"/>
+            <item
+                android:id="@+id/nav_add_product"
+                android:title="Add Product To Sell"
+                android:icon="@drawable/ic_add_product"/>
+            <item
+                android:id="@+id/nav_seller_items"
+                android:title="My Items"
+                android:icon="@drawable/ic_items"/>
+            <item
+                android:id="@+id/nav_seller_update_items"
+                android:title="Update Items"
+                android:icon="@drawable/ic_update_items"/>
+            <item
+                android:id="@+id/nav_settings"
+                android:title="Settings"
+                android:icon="@drawable/ic_settings"/>
+        </menu>
+    </item>
+    <item android:title="Social">
+        <menu>
+            <item
+                android:id="@+id/facebook"
+                android:title="Facebook"
+                android:icon="@drawable/ic_facebook"/>
+            <item
+                android:id="@+id/instagram"
+                android:title="Instagram"
+                android:icon="@drawable/ic_instagram"/>
+            <item
+                android:id="@+id/twitter"
+                android:title="Twitter"
+                android:icon="@drawable/ic_twitter"/>
+        </menu>
+    </item>
+</menu>
