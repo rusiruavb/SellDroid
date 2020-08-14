@@ -1,14 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductPage">
+    android:gravity="center"
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Product Page Fragment" />
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="Products"
+                android:textStyle="bold"
+                android:textSize="36dp"
+                android:textColor="@color/textColor"/>
 
-</FrameLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_add_product"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADD TO CART"
+                android:textSize="18dp"
+                android:background="@drawable/button_background"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:padding="15dp"
+                android:id="@+id/product_page_button"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BUY NOW"
+                android:textSize="18dp"
+                android:background="@drawable/button_background"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:padding="15dp"
+                android:id="@+id/product_page_button2"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
