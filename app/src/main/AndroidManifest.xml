@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".SellerHome"></activity>
+        <activity android:name=".SetNewUserPassword"></activity>
+        <activity android:name=".SellerHome" />
         <activity android:name=".UserHome" />
         <activity android:name=".SellerRegister" />
         <activity android:name=".UserRegister" />

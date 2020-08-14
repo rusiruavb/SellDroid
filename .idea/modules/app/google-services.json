@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "634735864040",
+    "firebase_url": "https://selldroid-final.firebaseio.com",
+    "project_id": "selldroid-final",
+    "storage_bucket": "selldroid-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634735864040:android:46c4805623db5f1ec0815d",
+        "android_client_info": {
+          "package_name": "com.example.selldroid_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "634735864040-kt4gaucbn8ldrnbku9qrs7e99967c760.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.selldroid_final",
+            "certificate_hash": "adde0a19e712f364ffd84e496034b851ccadfb50"
+          }
+        },
+        {
+          "client_id": "634735864040-gu57nrn6dpmdn8vqovt239vscnrs3lq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1u7dEKn7wzkOzZnug-YBXLeadhSL8DVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "634735864040-gu57nrn6dpmdn8vqovt239vscnrs3lq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
