@@ -28,6 +28,7 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
     private UserProfile userProfileFragment;
     private UserProfileUpdate updateUserProfileFragment;
     private AddPaymentMethod addPayment;
+    private HomePage homePage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
         userProfileFragment = new UserProfile();
         updateUserProfileFragment = new UserProfileUpdate();
         addPayment = new AddPaymentMethod();
+        homePage = new HomePage();
         setFragment(userProfileFragment);
     }
 
@@ -91,6 +93,9 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
                 break;
             case R.id.nav_user_cart:
                 fragment = new Cart();
+                break;
+            case R.id.nav_home:
+                fragment = new HomePage();
                 break;
         }
 

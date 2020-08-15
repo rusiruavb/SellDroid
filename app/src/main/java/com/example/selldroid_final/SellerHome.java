@@ -94,6 +94,9 @@ public class SellerHome extends AppCompatActivity implements NavigationView.OnNa
             case R.id.nav_seller_update_items:
                 fragment = new UpdateProduct();
                 break;
+            case R.id.nav_home:
+                fragment = new HomePage();
+                break;
         }
 
         if (fragment != null) {
