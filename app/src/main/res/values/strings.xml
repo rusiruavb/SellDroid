@@ -27,4 +27,15 @@
     <string name="validationPeriod">Validation Period</string>
     <string name="paymentPhoneNumber">Phone Number</string>
     <string name="addPaymentButton">ADD PAYMENT METHOD</string>
+
+    <!--Nithya-->
+    <!--Add product-->
+    <string name="productName">Product Name</string>
+    <string name="price">Price</string>
+    <string name="quantity">Quantity</string>
+    <string name="addProductButton">ADD PRODUCT</string>
+    <!--Product page-->
+    <string name="addToCartButton">ADD TO CART</string>
+    <string name="buyNowButton">BUY NOW</string>
+
 </resources>
