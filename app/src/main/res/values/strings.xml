@@ -8,11 +8,33 @@
 
     <!--jayalakshi-->
 
-    <!--set New password-->
+    <!--login-->
+    <string name="user_login">Login</string>
+    <string name="user_login_email">Email</string>
+    <string name="user_login_password">Password</string>
+    <string name="user_login_forgotPass">Forget Password</string>
+    <string name="user_login_createAccnt">Create a New Account</string>
+    <!--set New password page-->
     <string name="SetNewPassword">Set New Password</string>
+    <string name="SetNewPassword_email">Email</string>
+    <string name="SetNewPassword_phoneNum">Phone Number</string>
+    <string name="SetNewPassword_NewPass">New Password</string>
+    <string name="SetNewPassword_confirmPass">Confirm Password</string>
+    <string name="SetNewPassword_cancel">CANCEL</string>
     <!--User Registration Page-->
-    <string name="registerInput">Your Name</string>
-    <!--user Profile-->
+    <string name="user_register">Register to SellDroid</string>
+    <string name="user_register_name">Your Name</string>
+    <string name="user_register_email">Your Email Address</string>
+    <string name="user_register_phone">Phone Number</string>
+    <string name="user_register_pass">Enter Password</string>
+    <string name="user_register_confirmPass">Confirm Password</string>
+    <!--User profile update Page-->
+    <string name="update_user_profile">Update My Profile</string>
+    <string name="update_user_profile_name">Name</string>
+    <string name="update_user_profile_email">Email Address</string>
+    <string name="update_user_profile_phoneNum">Phone Number</string>
+    <string name="update_user_profile_password">Password</string>
+    <!--user Profile page-->
     <string name="userProfileDate">DATE</string>
     <string name="UserProfileTotalCost">COST</string>
     <string name="UserProfileItem">ITEM</string>
