@@ -4,7 +4,6 @@
     <string name="close">Close</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="cart_header">My Cart</string>
 
     <!--jayalakshi-->
 
@@ -65,6 +64,26 @@
     <string name="validationPeriod">Validation Period</string>
     <string name="paymentPhoneNumber">Phone Number</string>
     <string name="addPaymentButton">ADD PAYMENT METHOD</string>
+    <!--Cart-->
+    <string name="cart_header">My Cart</string>
+    <string name="ItemName">Item Name</string>
+    <!--Payment Methods-->
+    <string name="paymentTitle">My Payment Methods</string>
+    <string name="paymentName">BOC Master Card</string>
+    <string name="paymentCardNumber">4563 8547 8521 1121</string>
+    <string name="validateDate">15/23</string>
+    <string name="visaName">VISA</string>
+    <string name="ntbName">NTB Online Card</string>
+    <string name="hdfcName">HDFC Debit Card</string>
+    <!--Select Payment Method-->
+    <string name="selectPaymentTitle">Select Your Payment Method</string>
+    <!--Home Page-->
+    <string name="product_title_1">Samsung A50</string>
+    <string name="product_price_1">Rs.27500</string>
+    <string name="product_title_2">Apple iPhone 6s</string>
+    <string name="product_price_2">Rs.45000</string>
+    <string name="product_title_3">LG TV</string>
+    <string name="product_price_3">Rs.235000</string>
 
     <!--Nithya-->
     <!--Add product-->
@@ -75,14 +94,14 @@
     <string name="addProductButton">ADD PRODUCT</string>
     <!--Product page-->
     <string name="products">Products</string>
-    <string name="productNAme">Product Name</string>
-    <string name="Price">Price</string>
+    <string name="productNAme">Razer Phone 2</string>
+    <string name="Price">Rs.96500</string>
     <string name="sellerInformation">Seller Information</string>
-    <string name="sellerName">Seller Name</string>
-    <string name="sellerEmail">Seller Email</string>
-    <string name="sellerCompany">Seller Company</string>
-    <string name="sellerPhoneNumber">Seller Phone Number</string>
-    <string name="sellerAddress">Address</string>
+    <string name="sellerName">Seller Name - Ravindu</string>
+    <string name="sellerEmail">Seller Email - ravindu@gmail.com</string>
+    <string name="sellerCompany">Seller Company - RK Stores</string>
+    <string name="sellerPhoneNumber">Seller Phone Number - 0775632521</string>
+    <string name="sellerAddress">Address - Colombo 3</string>
     <string name="addToCartButton">ADD TO CART</string>
     <string name="buyNowButton">BUY NOW</string>
     <!--Update product-->
@@ -101,8 +120,6 @@
     <string name="iphone11ProMax">i phone 11 Pro Max</string>
 
 
-
-
     <!-- Binu -->
     <!-- seller login-->
     <string name="email_seller_login">Enter Your email</string>
@@ -110,6 +127,7 @@
     <string name="email">Email</string>
 
     <!-- set new seller password-->
+    <string name="set_password_email">Enter your seller email</string>
     <string name="phone_number">Phone Number</string>
     <string name="new_password">New Password</string>
     <string name="confirm_password">Confirm Password</string>
@@ -135,10 +153,10 @@
     <string name="samsung_j7B">Samsung J7</string>
     <string name="iphone_6sB">iPhone 6s</string>
     <string name="guitarB">Guitar</string>
-    <string name="product_nameB">PRODUCT NAME</string>
+    <string name="product_nameB">PRODUCT</string>
     <string name="priceB">PRICE</string>
     <string name="quantityB">QUANTITY</string>
-    <string name="my_itemsB">My Items</string>
+    <string name="my_itemsB">My Items To Sell</string>
     <string name="iphone_5sB">iPhone 5s</string>
     <string name="wireless_chargerB">Wireless Charger</string>
 
@@ -153,7 +171,8 @@
     <string name="enter_company_shop_addressBM">Enter Company/shop address</string>
     <string name="phone_numberBM">Phone Number</string>
     <string name="passwordBM">Password</string>
-    <string name="set_new_passwordBI">Set New Password</string>
+    <string name="set_new_passwordBI">Set New Seller Password</string>
+    <string name="set_new_passworddesBI">Forgot Your Seller Password... Change it Here</string>
 
 
 </resources>

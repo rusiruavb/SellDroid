@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserProfile">
+    tools:context=".UserProfile"
+    android:background="@drawable/bg">
 
     <TextView
         android:id="@+id/textView43"
@@ -178,7 +179,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:text="Nimal Jayaweera"
-        android:textColor="@color/textColor"
+        android:textColor="@color/textColorWhite"
         android:textFontWeight="900"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -191,7 +192,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="6dp"
         android:text="nimal@gamil.com"
-        android:textColor="@color/textColor"
+        android:textColor="@color/textColorWhite"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/user_image"
         app:layout_constraintTop_toBottomOf="@+id/value_user_name" />
@@ -202,7 +203,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="6dp"
         android:text="0775563254"
-        android:textColor="@color/textColor"
+        android:textColor="@color/textColorWhite"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/user_image"
         app:layout_constraintTop_toBottomOf="@+id/value_user_email" />
@@ -225,7 +226,7 @@
         android:layout_width="67dp"
         android:layout_height="25dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:text="@string/userProfileDate"
         android:textColor="#100E0E"
         android:textSize="22sp"
@@ -261,9 +262,9 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="10dp"
         android:text="My Items"
-        android:textColor="#171414"
+        android:textColor="@color/textColorWhite"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

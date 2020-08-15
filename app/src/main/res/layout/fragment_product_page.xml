@@ -15,51 +15,41 @@
             android:orientation="vertical"
             android:gravity="center">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/products"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@color/textColor"
-                android:textSize="36dp"
-                android:textStyle="bold" />
-
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:src="@drawable/ic_add_product"/>
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/phone"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="@string/productNAme"
-                android:textAppearance="?android:textAppearanceMedium"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textStyle="bold"
                 android:textColor="@color/textColor"
-                android:textSize="20dp" />
+                android:textSize="25dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="@string/Price"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/textColor"
-                android:textSize="20dp" />
+                android:textSize="22dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:padding="15dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="@string/sellerInformation"
+                android:layout_marginTop="15dp"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/textColor"
                 android:textSize="23dp"
@@ -68,8 +58,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="@string/sellerName"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/textColor"
@@ -78,8 +68,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="@string/sellerEmail"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/textColor"
@@ -88,8 +78,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="@string/sellerCompany"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/textColor"
@@ -98,8 +88,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="@string/sellerPhoneNumber"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/textColor"
@@ -108,11 +98,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="@string/sellerAddress"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/textColor"
+                android:layout_marginBottom="25dp"
                 android:textSize="20dp" />
 
             <Button
@@ -121,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:width="45dp"
-                android:background="@drawable/button_background"
+                android:background="@drawable/button_add_to_cart"
                 android:padding="15dp"
                 android:text="@string/addToCartButton"
                 android:textSize="18dp" />
@@ -132,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:width="45dp"
-                android:background="@drawable/button_background"
+                android:background="@drawable/button_buy_now"
                 android:padding="15dp"
                 android:text="@string/buyNowButton"
                 android:textSize="18dp" />

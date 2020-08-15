@@ -23,10 +23,6 @@
                 android:title="My Items"
                 android:icon="@drawable/ic_items"/>
             <item
-                android:id="@+id/nav_seller_update_items"
-                android:title="Update Items"
-                android:icon="@drawable/ic_update_items"/>
-            <item
                 android:id="@+id/nav_settings"
                 android:title="Settings"
                 android:icon="@drawable/ic_settings"/>

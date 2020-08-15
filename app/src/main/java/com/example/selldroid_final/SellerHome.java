@@ -27,6 +27,8 @@ public class SellerHome extends AppCompatActivity implements NavigationView.OnNa
     // Fragment Objects
     private SellerProfile sellerProfile;
     private SellerProfileUpdate sellerUpdate;
+    private ProductPage productPage;
+    private SelectPayment selectPay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +51,9 @@ public class SellerHome extends AppCompatActivity implements NavigationView.OnNa
         // Create fragment objects
         sellerProfile = new SellerProfile();
         sellerUpdate = new SellerProfileUpdate();
-        setFragment(sellerUpdate);
+        productPage = new ProductPage();
+        selectPay = new SelectPayment();
+        setFragment(selectPay);
     }
 
     private void setFragment(Fragment fragment) {
@@ -89,10 +93,7 @@ public class SellerHome extends AppCompatActivity implements NavigationView.OnNa
                 fragment = new AddProduct();
                 break;
             case R.id.nav_seller_items:
-                //fragment = new Cart();
-                break;
-            case R.id.nav_seller_update_items:
-                fragment = new UpdateProduct();
+                fragment = new SellerItems();
                 break;
             case R.id.nav_home:
                 fragment = new HomePage();

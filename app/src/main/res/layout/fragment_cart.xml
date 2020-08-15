@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Cart"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bg">
 
     <TextView
         android:id="@+id/textView19"
@@ -288,8 +289,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/cart_header"
-        android:textAlignment="center"
-        android:textColor="@color/textColor"
+        android:textAlignment="textStart"
+        android:textColor="@color/textColorWhite"
+        android:paddingStart="44dp"
         android:textStyle="bold"
         android:textSize="38dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -300,12 +302,12 @@
         android:layout_width="139dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="32dp"
-        android:textStyle="bold"
-        android:text="Item Name"
+        android:layout_marginTop="24dp"
+        android:text="@string/ItemName"
         android:textColor="@color/textColor"
         android:textFontWeight="?android:textAppearanceLarge"
         android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -392,9 +394,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:width="380dp"
-        android:background="@drawable/button_background"
+        android:background="@drawable/button_logout_background"
         android:padding="15dp"
         android:text="checkout"
         android:textSize="22dp"
