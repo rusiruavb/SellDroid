@@ -5,95 +5,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserProfile">
+
     <TextView
         android:id="@+id/textView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:text="@string/user_profile_item2"
+        android:layout_width="41dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="56dp"
+        android:text="@string/user_profile_item6"
         android:textColor="#100F0F"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView42"
         app:layout_constraintTop_toTopOf="@+id/textView42" />
+
     <TextView
         android:id="@+id/textView42"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text="@string/user_profile_cost2"
+        android:text="@string/user_profile_cost6"
         android:textColor="#050505"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView41"
         app:layout_constraintTop_toTopOf="@+id/textView41" />
+
     <TextView
         android:id="@+id/textView41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:text="@string/user_profile_date2"
+        android:text="@string/user_profile_date6"
         android:textColor="#0C0A0A"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
     <TextView
         android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:text="@string/user_profile_item2"
+        android:layout_marginStart="44dp"
+        android:text="@string/user_profile_item5"
         android:textColor="#100F0F"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView39"
         app:layout_constraintTop_toTopOf="@+id/textView39" />
+
     <TextView
         android:id="@+id/textView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text="@string/user_profile_cost2"
+        android:text="@string/user_profile_cost5"
         android:textColor="#050505"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView38"
         app:layout_constraintTop_toTopOf="@+id/textView38" />
+
     <TextView
         android:id="@+id/textView38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:text="@string/user_profile_date2"
+        android:text="@string/user_profile_date5"
         android:textColor="#0C0A0A"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
     <TextView
         android:id="@+id/textView37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:text="@string/user_profile_item2"
+        android:layout_marginStart="68dp"
+        android:text="@string/user_profile_item4"
         android:textColor="#100F0F"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView36"
         app:layout_constraintTop_toTopOf="@+id/textView36" />
+
     <TextView
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text="@string/user_profile_cost2"
+        android:text="@string/user_profile_cost4"
         android:textColor="#050505"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView35"
         app:layout_constraintTop_toTopOf="@+id/textView35" />
+
     <TextView
         android:id="@+id/textView35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:text="@string/user_profile_date2"
+        android:text="@string/user_profile_date4"
         android:textColor="#0C0A0A"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -128,33 +137,36 @@
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView27"
         app:layout_constraintTop_toTopOf="@+id/textView27" />
+
     <TextView
         android:id="@+id/textView31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:text="@string/user_profile_item2"
+        android:layout_marginStart="56dp"
+        android:text="@string/user_profile_item3"
         android:textColor="#100F0F"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView30"
         app:layout_constraintTop_toTopOf="@+id/textView30" />
+
     <TextView
         android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text="@string/user_profile_cost2"
+        android:text="@string/user_profile_cost3"
         android:textColor="#050505"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView29"
         app:layout_constraintTop_toTopOf="@+id/textView29" />
+
     <TextView
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:text="@string/user_profile_date2"
+        android:text="@string/user_profile_date3"
         android:textColor="#0C0A0A"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -323,7 +335,7 @@
         android:layout_margin="10dp"
         android:layout_marginBottom="24dp"
         android:width="45dp"
-        android:background="@drawable/button_background"
+        android:background="@drawable/button_logout_background"
         android:padding="15dp"
         android:text="LOGOUT"
         android:textSize="18dp"

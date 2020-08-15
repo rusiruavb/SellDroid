@@ -7,8 +7,12 @@
     <string name="cart_header">My Cart</string>
 
     <!--jayalakshi-->
+
+    <!--set New password-->
     <string name="SetNewPassword">Set New Password</string>
+    <!--User Registration Page-->
     <string name="registerInput">Your Name</string>
+    <!--user Profile-->
     <string name="userProfileDate">DATE</string>
     <string name="UserProfileTotalCost">COST</string>
     <string name="UserProfileItem">ITEM</string>
@@ -18,6 +22,18 @@
     <string name="user_profile_cost2">RS.750</string>
     <string name="user_profile_Item1">Guitar</string>
     <string name="user_profile_item2">Phone cover</string>
+    <string name="user_profile_date3">2020/05/21</string>
+    <string name="user_profile_date4">2020/06/01</string>
+    <string name="user_profile_date5">2020/07/04</string>
+    <string name="user_profile_cost3">RS.4750</string>
+    <string name="user_profile_cost4">RS.450</string>
+    <string name="user_profile_cost5">RS.10500</string>
+    <string name="user_profile_date6">2020/08/11</string>
+    <string name="user_profile_cost6">RS.1000</string>
+    <string name="user_profile_item3">Hard Disk</string>
+    <string name="user_profile_item4">Ear Phone</string>
+    <string name="user_profile_item5">Nokia phone</string>
+    <string name="user_profile_item6">USB</string>
 
     <!--Rusiru-->
     <!--Add Payment Method Layout-->
