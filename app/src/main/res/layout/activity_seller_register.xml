@@ -19,78 +19,85 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Register As Seller"
+                android:text="@string/register_as_sellerB"
                 android:textColor="@color/textColor"
                 android:textSize="32dp"
                 android:gravity="center"
                 android:textStyle="bold"/>
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/seller_register_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:layout_margin="10dp"
-                android:hint="@string/enter_your_name_seller_register"
-                android:maxLines="1"
+                android:hint="@string/enter_your_nameB"
                 android:inputType="text"
-                android:id="@+id/seller_register_name"/>
+                android:maxLines="1"
+                android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/seller_register_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:layout_margin="10dp"
-                android:hint="@string/enter_your_email_address_seller_register"
-                android:maxLines="1"
+                android:hint="@string/enter_your_email_addressB"
                 android:inputType="textEmailAddress"
-                android:id="@+id/seller_register_email"/>
+                android:maxLines="1"
+                android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/seller_shop_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="@string/enter_company_shop_name_seller_register"
-                android:maxLines="1"
+                android:hint="@string/enter_company_shop_nameB"
                 android:inputType="text"
+                android:maxLines="1"
                 android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/seller_shop_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:layout_margin="10dp"
-                android:hint="@string/enter_company_shop_address_seller_register"
-                android:maxLines="1"
+                android:hint="@string/enter_company_shop_addressB"
                 android:inputType="text"
-                android:id="@+id/seller_shop_address"/>
+                android:maxLines="1"
+                android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/seller_register_pNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:layout_margin="10dp"
+                android:hint="@string/enter_phone_numberB"
                 android:inputType="number"
-                android:hint="Phone Number"
                 android:maxLines="1"
-                android:id="@+id/seller_register_pNumber"/>
+                android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/seller_register_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:layout_margin="10dp"
+                android:hint="@string/enter_new_passwordB"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:hint="@string/enter_password_seller_register"
-                android:id="@+id/seller_register_password"/>
+                android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/seller_register_conformPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:layout_margin="10dp"
+                android:hint="@string/confirm_passwordB"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:hint="@string/conform_password_seller_register"
-                android:id="@+id/seller_register_conformPassword"/>
+                android:padding="15dp" />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="create new account"
+                android:text="@string/create_new_accountB"
                 android:textSize="18dp"
                 android:background="@drawable/button_background"
                 android:layout_margin="10dp"
@@ -103,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:gravity="center"
-                android:text="@string/already_have_a_seller_account_seller_register" />
+                android:text="@string/already_has_an_accountB" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -72,4 +72,58 @@
     <string name="updateProductButton">UPDATE PRODUCT</string>
     <string name="Cancel">Cancel</string>
 
+
+    <!-- Binu -->
+    <!-- seller login-->
+    <string name="email_seller_login">Enter Your email</string>
+    <string name="password_seller_login">Enter your Password</string>
+    <string name="email">Email</string>
+
+    <!-- set new seller password-->
+    <string name="phone_number">Phone Number</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_your_name_seller_register">Enter Your Name</string>
+    <string name="enter_your_email_address_seller_register">Enter Your Email Address</string>
+    <string name="enter_company_shop_name_seller_register">Enter Company/Shop Name</string>
+
+    <!--Seller register-->
+    <string name="register_as_sellerB">Register As Seller</string>
+    <string name="enter_your_nameB">Enter Your Name</string>
+    <string name="enter_your_email_addressB">Enter Your Email Address</string>
+    <string name="enter_company_shop_nameB">Enter Company/Shop Name</string>
+    <string name="enter_company_shop_addressB">Enter Company/Shop Address</string>
+    <string name="enter_phone_numberB">Enter Phone Number</string>
+    <string name="enter_new_passwordB">Enter New Password</string>
+    <string name="confirm_passwordB">Confirm Password</string>
+    <string name="create_new_accountB">create new account</string>
+    <string name="already_has_an_accountB">Already has an Account</string>
+
+
+    <!--Seller profile-->
+    <string name="led_mouseB">LED Mouse</string>
+    <string name="samsung_j7B">Samsung J7</string>
+    <string name="iphone_6sB">iPhone 6s</string>
+    <string name="guitarB">Guitar</string>
+    <string name="product_nameB">PRODUCT NAME</string>
+    <string name="priceB">PRICE</string>
+    <string name="quantityB">QUANTITY</string>
+    <string name="my_itemsB">My Items</string>
+    <string name="iphone_5sB">iPhone 5s</string>
+    <string name="wireless_chargerB">Wireless Charger</string>
+
+    <!--Seller profile update-->
+    <string name="update_seller_dataB">Update Seller Data</string>
+    <string name="nameB">Name</string>
+    <string name="email_addressB">Email Address</string>
+    <string name="phone_numberB">Phone Number</string>
+    <string name="enter_company_shop_nameBM">Enter Company/Shop Name</string>
+    <string name="nameBM">Name</string>
+    <string name="email_addressBM">Email Address</string>
+    <string name="enter_company_shop_addressBM">Enter Company/shop address</string>
+    <string name="phone_numberBM">Phone Number</string>
+    <string name="passwordBM">Password</string>
+    <string name="set_new_passwordBI">Set New Password</string>
+
+
 </resources>
