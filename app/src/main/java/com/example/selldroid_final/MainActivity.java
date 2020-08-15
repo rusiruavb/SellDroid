@@ -39,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_user_profile);
+        setContentView(R.layout.fragment_seller_items);
         progress = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
         // check user already logged in
-        if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), SellerHome.class));
-        }
+//        if (mAuth.getCurrentUser() != null) {
+//            startActivity(new Intent(getApplicationContext(), UserHome.class));
+//        }
        // userLogin();
     }
 
