@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:padding="15dp"
-                android:hint="Email"
+                android:hint="@string/email_seller_login"
                 android:maxLines="1"
                 android:inputType="textEmailAddress"
                 android:id="@+id/login_seller_email"/>
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:padding="15dp"
-                android:hint="Password"
+                android:hint="@string/password_seller_login"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:id="@+id/login_seller_password"/>

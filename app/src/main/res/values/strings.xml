@@ -18,6 +18,39 @@
     <string name="user_profile_cost2">RS.750</string>
     <string name="user_profile_Item1">Guitar</string>
     <string name="user_profile_item2">Phone cover</string>
+    <!--Binu- seller profile-->
+    <string name="my_items">My Items</string>
+    <string name="product_name">PRODUCT NAME</string>
+    <string name="led_mouse_item6">LED mouse</string>
+    <string name="samsung_j7_item5">Samsung J7</string>
+    <string name="iphone_6s_item4">iphone 6s</string>
+    <string name="guitar_item3">Guitar</string>
+    <string name="price_seller_profile">PRICE</string>
+    <string name="quantity_seller_profile">QUANTITY</string>
+    <string name="iphone_5s_item2">iphone 5s</string>
+    <string name="wireless_charger_item1">wireless charger</string>
+
+    <!--Binu- update seller data-->
+    <string name="name_update_seller_1">Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="enter_company_shop_name">Enter company/shop name</string>
+    <string name="phone_number_seller">Phone Number</string>
+    <string name="password_seller">Password</string>
+    <string name="update_seller_data">Update Seller Data</string>
+    <!--Binu- seller login-->
+    <string name="email_seller_login">Email</string>
+    <string name="password_seller_login">Password</string>
+
+
+    <!--Binu- seller login-->
+    <string name="enter_your_name_seller_register">Enter Your Name</string>
+    <string name="enter_your_email_address_seller_register">Enter Your Email Address</string>
+    <string name="enter_company_shop_name_seller_register">Enter Company/Shop Name</string>
+    <string name="enter_company_shop_address_seller_register">Enter Company/Shop Address</string>
+    <string name="enter_password_seller_register">Enter Password</string>
+    <string name="conform_password_seller_register">Conform Password</string>
+    <string name="already_have_a_seller_account_seller_register">Already Have A Seller Account</string>
+
 
 
 </resources>
