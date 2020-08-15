@@ -19,5 +19,12 @@
     <string name="user_profile_Item1">Guitar</string>
     <string name="user_profile_item2">Phone cover</string>
 
-
+    <!--Rusiru-->
+    <!--Add Payment Method Layout-->
+    <string name="nameOnTheCard">Name on the Card</string>
+    <string name="cardNumber">Card Number</string>
+    <string name="cvv">CVV</string>
+    <string name="validationPeriod">Validation Period</string>
+    <string name="paymentPhoneNumber">Phone Number</string>
+    <string name="addPaymentButton">ADD PAYMENT METHOD</string>
 </resources>
