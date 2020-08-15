@@ -1,14 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SellerProfileUpdate">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Update Seller Profile Fragment" />
 
-</FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Update Seller Data"
+                android:textColor="@color/textColor"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="15dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/update_seller_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="Enter company/shop name"
+                android:inputType="textShortMessage"
+                android:maxLines="1"
+                android:padding="15dp" /><![CDATA[
+                />
+
+            ]]>
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="Enter Company/shop address"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:padding="15dp"
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_user_phoneNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Phone Number"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="15dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_user_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Password"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="15dp" />
+
+            <Button
+                android:id="@+id/update_user_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:background="@drawable/button_background"
+                android:padding="15dp"
+                android:text="Update"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/delete_user_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:background="@drawable/button_delete_background"
+                android:padding="15dp"
+                android:text="DELETE ACCOUNT"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/cancel_user_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CANCEL UPDATE" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -97,12 +97,13 @@
                 android:width="45dp"
                 android:padding="15dp"
                 android:id="@+id/seller_register_button"/>
+
             <TextView
+                android:id="@+id/seller_register_to_login"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Already Have A Seller Account"
+                android:layout_height="70dp"
                 android:gravity="center"
-                android:id="@+id/seller_register_to_login"/>
+                android:text="Already Have A Seller Account" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
