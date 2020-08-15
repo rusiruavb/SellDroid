@@ -60,20 +60,20 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="add product"
+                android:text="ADD PRODUCT"
                 android:textSize="18dp"
                 android:background="@drawable/button_background"
                 android:layout_margin="10dp"
                 android:width="45dp"
                 android:padding="15dp"
-                android:id="@+id/login_button"/>
+                android:id="@+id/add_product_button"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CANCEL"
                 android:padding="5dp"
                 android:gravity="center"
-                android:id="@+id/login_as_seller"/>
+                android:id="@+id/add_product_cancel"/>
         </LinearLayout>
 
     </ScrollView>
