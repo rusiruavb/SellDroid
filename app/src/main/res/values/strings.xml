@@ -93,6 +93,14 @@
     <string name="deleteProduct">DELETE PRODUCT</string>
     <string name="updateProductButton">UPDATE PRODUCT</string>
     <string name="Cancel">Cancel</string>
+    <!--Seller items-->
+    <string name="myItems">My Items</string>
+    <string name="iphoneXsMax">i phone Xs Max</string>
+    <string name="sGalaxyS20">S Galaxy S20</string>
+    <string name="onePlus8Pro">One Plus 8 Pro</string>
+    <string name="iphone11ProMax">i phone 11 Pro Max</string>
+
+
 
 
     <!-- Binu -->
