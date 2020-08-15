@@ -35,5 +35,23 @@
     <string name="user_profile_item5">Nokia phone</string>
     <string name="user_profile_item6">USB</string>
 
+    <!--Rusiru-->
+    <!--Add Payment Method Layout-->
+    <string name="nameOnTheCard">Name on the Card</string>
+    <string name="cardNumber">Card Number</string>
+    <string name="cvv">CVV</string>
+    <string name="validationPeriod">Validation Period</string>
+    <string name="paymentPhoneNumber">Phone Number</string>
+    <string name="addPaymentButton">ADD PAYMENT METHOD</string>
+
+    <!--Nithya-->
+    <!--Add product-->
+    <string name="productName">Product Name</string>
+    <string name="price">Price</string>
+    <string name="quantity">Quantity</string>
+    <string name="addProductButton">ADD PRODUCT</string>
+    <!--Product page-->
+    <string name="addToCartButton">ADD TO CART</string>
+    <string name="buyNowButton">BUY NOW</string>
 
 </resources>
