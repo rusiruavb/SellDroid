@@ -14,15 +14,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="@string/products"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:text="Products"
-                android:textStyle="bold"
+                android:textColor="@color/textColor"
                 android:textSize="36dp"
-                android:textColor="@color/textColor"/>
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
@@ -36,105 +37,105 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
+                android:text="@string/productNAme"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:text="Product name : Huawei Nova 3i"
-                android:textSize="20dp"
-                android:textColor="@color/textColor"/>
+                android:textColor="@color/textColor"
+                android:textSize="20dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
+                android:text="@string/Price"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:text="Price : Rs.45,000"
-                android:textSize="20dp"
-                android:textColor="@color/textColor"/>
+                android:textColor="@color/textColor"
+                android:textSize="20dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
                 android:layout_margin="10dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
                 android:padding="15dp"
+                android:text="@string/sellerInformation"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:text="Seller Information"
+                android:textColor="@color/textColor"
                 android:textSize="23dp"
-                android:textStyle="bold"
-                android:textColor="@color/textColor"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
+                android:text="@string/sellerName"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:text="Seller name : Anusha Ekanayake"
-                android:textSize="20dp"
-                android:textColor="@color/textColor"/>
+                android:textColor="@color/textColor"
+                android:textSize="20dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
+                android:text="@string/sellerEmail"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:text="Seller email : anushaE@gmail.com"
-                android:textSize="20dp"
-                android:textColor="@color/textColor"/>
+                android:textColor="@color/textColor"
+                android:textSize="20dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
+                android:text="@string/sellerCompany"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:text="Seller company/shop : Walkie talkie "
-                android:textSize="20dp"
-                android:textColor="@color/textColor"/>
+                android:textColor="@color/textColor"
+                android:textSize="20dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
+                android:text="@string/sellerPhoneNumber"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:text="Seller phone number : 0712345679 "
-                android:textSize="20dp"
-                android:textColor="@color/textColor"/>
+                android:textColor="@color/textColor"
+                android:textSize="20dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
+                android:text="@string/sellerAddress"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:text="Seller address : 58/D,koswatta "
-                android:textSize="20dp"
-                android:textColor="@color/textColor"/>
+                android:textColor="@color/textColor"
+                android:textSize="20dp" />
 
             <Button
+                android:id="@+id/product_page_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ADD TO CART"
-                android:textSize="18dp"
-                android:background="@drawable/button_background"
                 android:layout_margin="10dp"
                 android:width="45dp"
+                android:background="@drawable/button_background"
                 android:padding="15dp"
-                android:id="@+id/product_page_button"/>
+                android:text="@string/addToCartButton"
+                android:textSize="18dp" />
 
             <Button
+                android:id="@+id/product_page_button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="BUY NOW"
-                android:textSize="18dp"
-                android:background="@drawable/button_background"
                 android:layout_margin="10dp"
                 android:width="45dp"
+                android:background="@drawable/button_background"
                 android:padding="15dp"
-                android:id="@+id/product_page_button2"/>
+                android:text="@string/buyNowButton"
+                android:textSize="18dp" />
 
 
 
