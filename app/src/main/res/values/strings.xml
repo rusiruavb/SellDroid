@@ -10,7 +10,7 @@
     <string name="SetNewPassword">Set New Password</string>
     <string name="registerInput">Your Name</string>
     <string name="userProfileDate">DATE</string>
-    <string name="UserProfileTotalCost">TOTAL COST</string>
+    <string name="UserProfileTotalCost">COST</string>
     <string name="UserProfileItem">ITEM</string>
     <string name="user_profile_date1">2020/02/08</string>
     <string name="user_profile_date2">2020/04/23</string>

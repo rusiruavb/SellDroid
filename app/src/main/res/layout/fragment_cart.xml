@@ -7,7 +7,6 @@
     tools:context=".Cart"
     android:orientation="vertical">
 
-
     <TextView
         android:id="@+id/textView19"
         android:layout_width="139dp"

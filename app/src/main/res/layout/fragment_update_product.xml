@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:text="DELETE PRODUCT"
                 android:textSize="18dp"
-                android:background="@drawable/button_background"
+                android:background="@drawable/button_delete_background"
                 android:layout_margin="10dp"
                 android:width="45dp"
                 android:padding="15dp"
