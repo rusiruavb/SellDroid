@@ -71,9 +71,27 @@
     <string name="productName">Product Name</string>
     <string name="price">Price</string>
     <string name="quantity">Quantity</string>
+    <string name="cancel">Cancel</string>
     <string name="addProductButton">ADD PRODUCT</string>
     <!--Product page-->
+    <string name="products">Products</string>
+    <string name="productNAme">Product Name</string>
+    <string name="Price">Price</string>
+    <string name="sellerInformation">Seller Information</string>
+    <string name="sellerName">Seller Name</string>
+    <string name="sellerEmail">Seller Email</string>
+    <string name="sellerCompany">Seller Company</string>
+    <string name="sellerPhoneNumber">Seller Phone Number</string>
+    <string name="sellerAddress">Address</string>
     <string name="addToCartButton">ADD TO CART</string>
     <string name="buyNowButton">BUY NOW</string>
+    <!--Update product-->
+    <string name="updateProductDetails">Update Product Details</string>
+    <string name="ProductName">Product Name</string>
+    <string name="PRice">Price</string>
+    <string name="Quantity">Quantity</string>
+    <string name="deleteProduct">DELETE PRODUCT</string>
+    <string name="updateProductButton">UPDATE PRODUCT</string>
+    <string name="Cancel">Cancel</string>
 
 </resources>
