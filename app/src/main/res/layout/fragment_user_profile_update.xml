@@ -16,50 +16,55 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Update My Profile"
+                android:gravity="center"
+                android:text="@string/update_user_profile"
                 android:textColor="@color/textColor"
                 android:textSize="32dp"
-                android:gravity="center"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_user_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:layout_margin="10dp"
-                android:hint="Name"
-                android:maxLines="1"
+                android:hint="@string/update_user_profile_name"
                 android:inputType="text"
-                android:id="@+id/update_user_name"/>
+                android:maxLines="1"
+                android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_user_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:layout_margin="10dp"
-                android:hint="Email Address"
-                android:maxLines="1"
+                android:hint="@string/update_user_profile_email"
                 android:inputType="textEmailAddress"
-                android:id="@+id/update_user_email"/>
+                android:maxLines="1"
+                android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/update_user_phoneNum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Phone Number"
-                android:maxLines="1"
+                android:hint="@string/update_user_profile_phoneNum"
                 android:inputType="text"
+                android:maxLines="1"
                 android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_user_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
                 android:layout_margin="10dp"
-                android:hint="Password"
-                android:maxLines="1"
+                android:hint="@string/update_user_profile_password"
                 android:inputType="text"
-                android:id="@+id/update_user_password"/>
+                android:maxLines="1"
+                android:padding="15dp" />
 
             <Button
                 android:layout_width="match_parent"

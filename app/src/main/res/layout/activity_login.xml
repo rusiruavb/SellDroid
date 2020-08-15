@@ -15,34 +15,36 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="@string/user_login"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:text="Login"
-                android:textStyle="bold"
+                android:textColor="@color/textColor"
                 android:textSize="36dp"
-                android:textColor="@color/textColor"/>
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:padding="15dp"
-                android:maxLines="1"
-                android:hint="Email"
+                android:hint="@string/user_login_email"
                 android:inputType="textEmailAddress"
-                android:id="@+id/login_email"/>
+                android:maxLines="1"
+                android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:padding="15dp"
-                android:maxLines="1"
-                android:hint="Password"
+                android:hint="@string/user_login_password"
                 android:inputType="textPassword"
-                android:id="@+id/login_password"/>
+                android:maxLines="1"
+                android:padding="15dp" />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,20 +62,22 @@
                 android:padding="5dp"
                 android:gravity="center"
                 android:id="@+id/login_as_seller"/>
+
             <TextView
+                android:id="@+id/foget_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Foget Password"
-                android:padding="5dp"
                 android:gravity="center"
-                android:id="@+id/foget_password"/>
+                android:padding="5dp"
+                android:text="@string/user_login_forgotPass" />
+
             <TextView
+                android:id="@+id/create_account"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Create a new Account"
-                android:padding="5dp"
                 android:gravity="center"
-                android:id="@+id/create_account"/>
+                android:padding="5dp"
+                android:text="@string/user_login_createAccnt" />
         </LinearLayout>
 
     </ScrollView>
