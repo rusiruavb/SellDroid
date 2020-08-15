@@ -23,56 +23,61 @@
                 android:textStyle="bold"
                 android:textSize="36dp"
                 android:textColor="@color/textColor"/>
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_product_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:padding="15dp"
-                android:maxLines="1"
-                android:hint="Product Name"
+                android:hint="@string/productName"
                 android:inputType="text"
-                android:id="@+id/add_product_name"/>
+                android:maxLines="1"
+                android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_product_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:padding="15dp"
-                android:maxLines="1"
-                android:hint="Price"
+                android:hint="@string/price"
                 android:inputType="number"
-                android:id="@+id/add_product_price"/>
+                android:maxLines="1"
+                android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_product_quantity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:padding="15dp"
-                android:maxLines="1"
-                android:hint="Quantity"
+                android:hint="@string/quantity"
                 android:inputType="number"
-                android:id="@+id/add_product_quantity"/>
+                android:maxLines="1"
+                android:padding="15dp" />
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
                 android:src="@drawable/ic_add_product"/>
+
             <Button
+                android:id="@+id/add_product_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ADD PRODUCT"
-                android:textSize="18dp"
-                android:background="@drawable/button_background"
                 android:layout_margin="10dp"
                 android:width="45dp"
+                android:background="@drawable/button_background"
                 android:padding="15dp"
-                android:id="@+id/add_product_button"/>
+                android:text="@string/addProductButton"
+                android:textSize="18dp" />
+
             <TextView
+                android:id="@+id/add_product_cancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CANCEL"
-                android:padding="5dp"
                 android:gravity="center"
-                android:id="@+id/add_product_cancel"/>
+                android:padding="5dp"
+                android:text="@string/cancel" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

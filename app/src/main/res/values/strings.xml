@@ -7,8 +7,12 @@
     <string name="cart_header">My Cart</string>
 
     <!--jayalakshi-->
+
+    <!--set New password-->
     <string name="SetNewPassword">Set New Password</string>
+    <!--User Registration Page-->
     <string name="registerInput">Your Name</string>
+    <!--user Profile-->
     <string name="userProfileDate">DATE</string>
     <string name="UserProfileTotalCost">COST</string>
     <string name="UserProfileItem">ITEM</string>
@@ -18,6 +22,54 @@
     <string name="user_profile_cost2">RS.750</string>
     <string name="user_profile_Item1">Guitar</string>
     <string name="user_profile_item2">Phone cover</string>
+    <string name="user_profile_date3">2020/05/21</string>
+    <string name="user_profile_date4">2020/06/01</string>
+    <string name="user_profile_date5">2020/07/04</string>
+    <string name="user_profile_cost3">RS.4750</string>
+    <string name="user_profile_cost4">RS.450</string>
+    <string name="user_profile_cost5">RS.10500</string>
+    <string name="user_profile_date6">2020/08/11</string>
+    <string name="user_profile_cost6">RS.1000</string>
+    <string name="user_profile_item3">Hard Disk</string>
+    <string name="user_profile_item4">Ear Phone</string>
+    <string name="user_profile_item5">Nokia phone</string>
+    <string name="user_profile_item6">USB</string>
 
+    <!--Rusiru-->
+    <!--Add Payment Method Layout-->
+    <string name="nameOnTheCard">Name on the Card</string>
+    <string name="cardNumber">Card Number</string>
+    <string name="cvv">CVV</string>
+    <string name="validationPeriod">Validation Period</string>
+    <string name="paymentPhoneNumber">Phone Number</string>
+    <string name="addPaymentButton">ADD PAYMENT METHOD</string>
+
+    <!--Nithya-->
+    <!--Add product-->
+    <string name="productName">Product Name</string>
+    <string name="price">Price</string>
+    <string name="quantity">Quantity</string>
+    <string name="cancel">Cancel</string>
+    <string name="addProductButton">ADD PRODUCT</string>
+    <!--Product page-->
+    <string name="products">Products</string>
+    <string name="productNAme">Product Name</string>
+    <string name="Price">Price</string>
+    <string name="sellerInformation">Seller Information</string>
+    <string name="sellerName">Seller Name</string>
+    <string name="sellerEmail">Seller Email</string>
+    <string name="sellerCompany">Seller Company</string>
+    <string name="sellerPhoneNumber">Seller Phone Number</string>
+    <string name="sellerAddress">Address</string>
+    <string name="addToCartButton">ADD TO CART</string>
+    <string name="buyNowButton">BUY NOW</string>
+    <!--Update product-->
+    <string name="updateProductDetails">Update Product Details</string>
+    <string name="ProductName">Product Name</string>
+    <string name="PRice">Price</string>
+    <string name="Quantity">Quantity</string>
+    <string name="deleteProduct">DELETE PRODUCT</string>
+    <string name="updateProductButton">UPDATE PRODUCT</string>
+    <string name="Cancel">Cancel</string>
 
 </resources>
