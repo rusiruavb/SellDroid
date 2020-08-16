@@ -98,7 +98,7 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
                 fragment = new HomePage();
                 break;
             case R.id.nav_payment_methods:
-                fragment = new PaymentMethods();
+                fragment = new UpdatePaymentMethod();
                 break;
         }
 

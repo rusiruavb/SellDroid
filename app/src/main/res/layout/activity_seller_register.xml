@@ -108,7 +108,7 @@
             <TextView
                 android:id="@+id/seller_register_to_login"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/already_has_an_accountB" />
             <TextView

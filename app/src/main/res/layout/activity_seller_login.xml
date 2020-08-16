@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:gravity="center"
     tools:context=".MainActivity">
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -24,7 +23,6 @@
                 android:textStyle="bold"
                 android:textSize="36dp"
                 android:textColor="@color/textColor"/>
-
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
