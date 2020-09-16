@@ -63,7 +63,7 @@
                 android:width="45dp"
                 android:background="@drawable/button_background"
                 android:padding="15dp"
-                android:text="@string/addProductButton"
+                android:text="Next"
                 android:textSize="18dp" />
 
             <TextView
