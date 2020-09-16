@@ -53,12 +53,7 @@
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp" />
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:src="@drawable/ic_add_product"/>
+
 
             <Button
                 android:id="@+id/add_product_button"
