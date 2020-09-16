@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         // check user already logged in
         if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), SellerHome.class));
+            startActivity(new Intent(getApplicationContext(), UserHome.class));
         }
         userLogin();
     }
