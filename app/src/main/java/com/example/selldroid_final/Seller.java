@@ -11,4 +11,5 @@ public class Seller {
     private EditText phoneNumber;
     private EditText password;
     private EditText confirmPassword;
+
 }

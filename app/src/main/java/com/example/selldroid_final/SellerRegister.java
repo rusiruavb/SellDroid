@@ -92,6 +92,7 @@ public class SellerRegister extends AppCompatActivity {
                 }
                 if (TextUtils.isEmpty(confirm_password)) {
                     confirmPassword.setError("Please reenter the password");
+                    return;
 
                 }
 
