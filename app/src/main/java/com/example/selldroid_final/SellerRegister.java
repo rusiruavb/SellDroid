@@ -106,9 +106,9 @@ public class SellerRegister extends AppCompatActivity {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Registration Success", Toast.LENGTH_LONG).show();
                             userId = auth.getCurrentUser().getUid();
-                            User user = new User(seller_name, seller_email, phone_number, pass_word);
-                            System.out.println(user);
-                            collection.child(userId).setValue(user);
+                            Seller seller = new Seller(seller_name, seller_email, shop_name, shop_address, phone_number, pass_word);
+                            System.out.println(seller);
+                            collection.child(userId).setValue(seller);
                         } else {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Registration Failed", Toast.LENGTH_SHORT).show();
