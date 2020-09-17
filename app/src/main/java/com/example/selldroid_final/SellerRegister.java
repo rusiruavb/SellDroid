@@ -1,11 +1,9 @@
 package com.example.selldroid_final;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -34,7 +32,6 @@ public class SellerRegister extends AppCompatActivity {
     private TextView hasAccount;
     private ProgressDialog dialog;
 
-
     private FirebaseAuth auth;
     private FirebaseDatabase mFirebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference collection = mFirebaseDatabase.getReference().child("Seller");
@@ -44,9 +41,6 @@ public class SellerRegister extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_register);
-        dialog = new ProgressDialog(this);
-        auth = FirebaseAuth.getInstance();
-        registerSeller();
     }
 
     private void registerSeller() {
@@ -127,15 +121,4 @@ public class SellerRegister extends AppCompatActivity {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
