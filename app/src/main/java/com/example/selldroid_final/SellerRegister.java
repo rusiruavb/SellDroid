@@ -74,48 +74,58 @@ public class SellerRegister extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(seller_name)) {
                     sellerName.setError("Please enter seller name");
+                    return;
                 }
                 if (TextUtils.isEmpty(seller_email)) {
                     sellerEmail.setError("Please enter email");
+                    return;
                 }
                 if (TextUtils.isEmpty(shop_name)) {
                     shopName.setError("Please enter shop name");
+                    return;
                 }
                 if (TextUtils.isEmpty(shop_address)) {
                     shopAddress.setError("Please enter shop address");
+                    return;
                 }
                 if (TextUtils.isEmpty(phone_number)) {
                     phoneNumber.setError("Please enter phone number");
+                    return;
                 }
                 if (TextUtils.isEmpty(pass_word)) {
                     password.setError("Please enter the password");
+                    return;
                 }
                 if (TextUtils.isEmpty(confirm_password)) {
                     confirmPassword.setError("Please reenter the password");
+                    return;
                 }
 
                 dialog.setMessage("Sending Data...");
                 dialog.show();
 
-                auth.createUserWithEmailAndPassword(seller_email,pass_word).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                auth.createUserWithEmailAndPassword(seller_email, pass_word).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()) {
+                        if (task.isSuccessful()) {
                             dialog.dismiss();
-                            Toast.makeText(getApplicationContext(),"Registration Success",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Registration Success", Toast.LENGTH_LONG).show();
                             userId = auth.getCurrentUser().getUid();
-                            User user = new User(seller_name,seller_email,phone_number,pass_word);
+                            User user = new User(seller_name, seller_email, phone_number, pass_word);
+                            System.out.println(user);
                             collection.child(userId).setValue(user);
                         } else {
                             dialog.dismiss();
-                            Toast.makeText(getApplicationContext(),"Registration Failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Registration Failed", Toast.LENGTH_SHORT).show();
                         }
                     }
+
                 });
 
             }
-        }
+        });
 
+    }
 }
 
 
