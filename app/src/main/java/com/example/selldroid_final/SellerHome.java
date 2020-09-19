@@ -29,6 +29,7 @@ public class SellerHome extends AppCompatActivity implements NavigationView.OnNa
     private SellerProfileUpdate sellerUpdate;
     private ProductPage productPage;
     private SelectPayment selectPay;
+    private HomePage homePage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,9 @@ public class SellerHome extends AppCompatActivity implements NavigationView.OnNa
         sellerUpdate = new SellerProfileUpdate();
         productPage = new ProductPage();
         selectPay = new SelectPayment();
-        setFragment(selectPay);
+        homePage = new HomePage();
+
+        setFragment(homePage);
     }
 
     private void setFragment(Fragment fragment) {

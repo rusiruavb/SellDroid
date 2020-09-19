@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Button loginButton;
     private TextView forgetPassword;
     private TextView createAccount;
+    private TextView loginSeller;
     private ProgressDialog progress;
 
     // Firebase variables
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         // check user already logged in
         if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), UserHome.class));
+            startActivity(new Intent(getApplicationContext(), SellerHome.class));
         }
         userLogin();
     }
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.login_button);
         forgetPassword = findViewById(R.id.foget_password);
         createAccount = findViewById(R.id.create_account);
+        loginSeller = findViewById(R.id.login_as_seller);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +99,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), UserRegister.class));
+            }
+        });
+
+        loginSeller.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SellerLogin.class));
             }
         });
     }

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -41,6 +42,9 @@ public class SellerRegister extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_register);
+        dialog = new ProgressDialog(this);
+        auth = FirebaseAuth.getInstance();
+        registerSeller();
     }
 
     private void registerSeller() {
@@ -107,8 +111,8 @@ public class SellerRegister extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Registration Success", Toast.LENGTH_LONG).show();
                             userId = auth.getCurrentUser().getUid();
                             Seller seller = new Seller(seller_name, seller_email, shop_name, shop_address, phone_number, pass_word);
-                            System.out.println(seller);
                             collection.child(userId).setValue(seller);
+                            startActivity(new Intent(getApplicationContext(), SellerHome.class));
                         } else {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Registration Failed", Toast.LENGTH_SHORT).show();
