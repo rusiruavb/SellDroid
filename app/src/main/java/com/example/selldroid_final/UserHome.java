@@ -17,14 +17,12 @@ import com.google.android.material.navigation.NavigationView;
 
 public class UserHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    // Layout variables
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
     private Toolbar mToolbar;
     private ActionBarDrawerToggle mToggle;
     private FrameLayout mFrameLayout;
 
-    // Fragments
     private UserProfile userProfileFragment;
     private UserProfileUpdate updateUserProfileFragment;
     private AddPaymentMethod addPayment;
@@ -35,19 +33,18 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home);
 
-        // Assign layout variables
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mNavigationView = findViewById(R.id.navigation_view);
         mToolbar = findViewById(R.id.toolbar);
         mToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
-        //
+
         mToolbar.setTitle("SellDroid");
         setSupportActionBar(mToolbar);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mNavigationView.setNavigationItemSelectedListener(this);
-        // create fragment objects
+
         userProfileFragment = new UserProfile();
         updateUserProfileFragment = new UserProfileUpdate();
         addPayment = new AddPaymentMethod();

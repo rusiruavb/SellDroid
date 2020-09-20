@@ -17,14 +17,12 @@ import com.google.android.material.navigation.NavigationView;
 
 public class SellerHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    // Layout variables
     private DrawerLayout sellerDrawer;
     private NavigationView sellerNavigation;
     private Toolbar sellerToolBar;
     private FrameLayout sellerFrameLayout;
     private ActionBarDrawerToggle toggle;
 
-    // Fragment Objects
     private SellerProfile sellerProfile;
     private SellerProfileUpdate sellerUpdate;
     private ProductPage productPage;
@@ -62,6 +60,7 @@ public class SellerHome extends AppCompatActivity implements NavigationView.OnNa
     private void setFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.main_frame,fragment);
+        transaction.addToBackStack(null);
         transaction.commit();
     }
 
@@ -106,6 +105,7 @@ public class SellerHome extends AppCompatActivity implements NavigationView.OnNa
         if (fragment != null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.main_frame, fragment);
+            transaction.addToBackStack(null);
             transaction.commit();
         }
 

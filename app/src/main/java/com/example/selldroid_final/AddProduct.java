@@ -127,7 +127,7 @@ public class AddProduct extends Fragment {
                     final String name = productName.getText().toString().trim();
                     final String productPrice = price.getText().toString().trim();
                     final String productQuantity = quantity.getText().toString().trim();
-                    final String imgUri = allItemReference.getDownloadUrl().toString();
+                    final String itemId = mReference.push().getKey();
 
                     mProgressDialog.dismiss();
                     Toast.makeText(getContext(), "Item Added", Toast.LENGTH_LONG).show();
@@ -138,13 +138,12 @@ public class AddProduct extends Fragment {
                             String url = uri.toString();
                             StorageReference imageRef4 = storageReference.child(mAuth.getCurrentUser().getUid()).child(System.currentTimeMillis() + "." + GetFileExtension(imageUri));
                             imageRef4.putFile(imageUri);
-                            Item newItem = new Item(name, productPrice, productQuantity, url);
-                            String imageUploadId = mReference.push().getKey();
-
-                            allItems.child(imageUploadId).setValue(newItem);
-                            mReference.child(mAuth.getCurrentUser().getUid()).child(imageUploadId).setValue(newItem);
+                            Item newItem = new Item(itemId, name, productPrice, productQuantity, url);
+                            allItems.child(itemId).setValue(newItem);
+                            mReference.child(mAuth.getCurrentUser().getUid()).child(itemId).setValue(newItem);
                             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                             transaction.replace(R.id.main_frame, home);
+                            transaction.addToBackStack(null);
                             transaction.commit();
                         }
                     });
