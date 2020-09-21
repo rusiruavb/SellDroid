@@ -9,7 +9,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/item_card"
+        android:id="@+id/payment_item_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -26,27 +26,38 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/display_payment_validation_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="Loading..."
+                android:textColor="@color/textColor"
+                app:layout_constraintStart_toEndOf="@+id/vaidation_date"
+                app:layout_constraintTop_toTopOf="@+id/vaidation_date" />
+
+            <Button
+                android:id="@+id/payment_item_delete_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/ic_delete"
+                android:backgroundTint="@color/deleteButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
                 android:id="@+id/card_holder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="3dp"
-                android:text="Rs."
+                android:text="Card Holder : "
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/textColor"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/display_payment_number" />
-
-            <ImageView
-                android:id="@+id/display_cart_product_image"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/display_payment_number"
@@ -57,14 +68,14 @@
                 android:text="Loading..."
                 android:textAppearance="?android:textAppearanceLarge"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/display_cart_product_image" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/display_payment_holder_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:text="TextView"
+                android:text="Loading..."
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/textColor"
                 app:layout_constraintStart_toEndOf="@+id/card_holder"
@@ -74,11 +85,24 @@
                 android:id="@+id/display_payment_phone_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="TextView"
+                android:layout_marginStart="2dp"
+                android:text="Loading..."
                 android:textColor="@color/textColor"
                 app:layout_constraintStart_toEndOf="@+id/phone_number"
                 app:layout_constraintTop_toTopOf="@+id/phone_number" />
+
+            <TextView
+                android:id="@+id/vaidation_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="8dp"
+                android:text="Validation Period : "
+                android:textColor="@color/textColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phone_number" />
 
             <TextView
                 android:id="@+id/phone_number"
@@ -86,10 +110,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginBottom="10dp"
-                android:text="Quantity"
+                android:text="Phone Number : "
                 android:textColor="@color/textColor"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/card_holder" />
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -94,7 +94,5 @@ public class ProductPage extends Fragment {
         sellerStoreName.setText(bundle.getString("shopName"));
         sellerPhoneNumber.setText(bundle.getString("sellerPhoneNumber"));
         sellerAddress.setText(bundle.getString("shopAddress"));
-        // last day I stop here
-        // need to create cart and buy now pages logic
     }
 }

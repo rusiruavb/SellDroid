@@ -40,6 +40,7 @@ public class CartItems extends Fragment {
     private int sum = 0;
     private CartItems cartItems;
     private int databaseItemQuantity;
+    private int databaseItemQuantityForRemove;
     private int totalSum;
     private int value;
 
@@ -88,6 +89,19 @@ public class CartItems extends Fragment {
                         cartTotalPrice.setText(String.valueOf(totalSum));
                         holder.cartItemQuantity.setText(String.valueOf(databaseItemQuantity));
                         reference.child(auth.getCurrentUser().getUid()).child(model.getCartId()).child("itemQuantity").setValue(databaseItemQuantity);
+                        reference.child(auth.getCurrentUser().getUid()).child(model.getCartId()).child("totalPrice").setValue(totalSum);
+                    }
+                });
+
+                holder.removeItemButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        databaseItemQuantityForRemove = model.getItemQuantity();
+                        --databaseItemQuantityForRemove;
+                        totalSum = Integer.parseInt(model.getItemPrice()) * databaseItemQuantityForRemove;
+                        cartTotalPrice.setText(String.valueOf(totalSum));
+                        holder.cartItemQuantity.setText(String.valueOf(databaseItemQuantityForRemove));
+                        reference.child(auth.getCurrentUser().getUid()).child(model.getCartId()).child("itemQuantity").setValue(databaseItemQuantityForRemove);
                         reference.child(auth.getCurrentUser().getUid()).child(model.getCartId()).child("totalPrice").setValue(totalSum);
                     }
                 });

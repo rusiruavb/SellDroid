@@ -18,9 +18,9 @@ public class HomepageViewHolder extends RecyclerView.ViewHolder {
 
     public HomepageViewHolder(@NonNull View itemView) {
         super(itemView);
-        itemName = itemView.findViewById(R.id.display_item_name);
-        itemPrice = itemView.findViewById(R.id.display_item_price);
-        itemQuantity = itemView.findViewById(R.id.display_item_quantity);
+        itemName = itemView.findViewById(R.id.display_payment_number);
+        itemPrice = itemView.findViewById(R.id.display_payment_holder_name);
+        itemQuantity = itemView.findViewById(R.id.display_payment_phone_number);
         itemImage = itemView.findViewById(R.id.display_cart_product_image);
         itemCard = itemView.findViewById(R.id.item_card);
     }

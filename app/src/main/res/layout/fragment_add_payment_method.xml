@@ -23,39 +23,60 @@
                 android:textColor="@color/textColor"
                 android:textSize="32dp"
                 android:textStyle="bold" />
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/credit_card" />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/add_payment_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/nameOnTheCard"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="12dp"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp" />
-            <com.google.android.material.textfield.TextInputEditText
+
+            <mostafa.ma.saleh.gmail.com.editcredit.EditCredit
                 android:id="@+id/add_payment_card_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:disabledCards="visa|amex"
                 android:layout_margin="10dp"
                 android:hint="@string/cardNumber"
-                android:inputType="number"
-                android:maxLines="1"
-                android:padding="15dp" />
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_card"
+                android:drawablePadding="12dp"
+                app:drawableGravity="start"
+                android:padding="15dp"
+                app:separator="spaces" />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/add_payment_cvv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/cvv"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_cvv"
+                android:drawablePadding="12dp"
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/add_payment_validation_period"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/validationPeriod"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_calender"
+                android:drawablePadding="12dp"
                 android:inputType="date"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -65,6 +86,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/paymentPhoneNumber"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="12dp"
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -79,7 +103,7 @@
                 android:text="@string/addPaymentButton"
                 android:textSize="18dp" />
             <TextView
-                android:id="@+id/register_to_login"
+                android:id="@+id/add_payment_cancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
