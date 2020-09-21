@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             progress.dismiss();
-                            Toast.makeText(getApplicationContext(),"Login Susccessful",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), UserHome.class));
 //                            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 //                            transaction.replace(R.id.main_frame,mFragment);
