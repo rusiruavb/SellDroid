@@ -330,7 +330,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView26" />
 
     <Button
-        android:id="@+id/update_user_button"
+        android:id="@+id/user_logout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"

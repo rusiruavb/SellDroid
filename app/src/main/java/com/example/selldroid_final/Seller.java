@@ -10,14 +10,16 @@ public class Seller {
     private String shopAddress;
     private String phoneNumber;
     private String password;
+    private String type;
 
-    public Seller(String sellerName, String sellerEmail, String shopName, String shopAddress, String phoneNumber, String password) {
+    public Seller(String sellerName, String sellerEmail, String shopName, String shopAddress, String phoneNumber, String password, String type) {
         this.sellerName = sellerName;
         this.sellerEmail = sellerEmail;
         this.shopName = shopName;
         this.shopAddress = shopAddress;
         this.phoneNumber = phoneNumber;
         this.password = password;
+        this.type = type;
     }
 
     public String getSellerName() {
@@ -43,4 +45,6 @@ public class Seller {
     public String getPassword() {
         return password;
     }
+
+    public String getType() { return  type; }
 }

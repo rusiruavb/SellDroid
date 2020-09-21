@@ -52,10 +52,19 @@ public class AddProduct extends Fragment {
     private static final int GALARY_INTENT = 2;
     private Uri imageUri;
 
+    private String sellerName;
+    private String sellerEmail;
+    private String sellerShopName;
+    private String sellerPhoneNumber;
+    private String sellerAddress;
+    private String type;
+
     private FirebaseAuth mAuth;
     private FirebaseDatabase mFirebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference mReference = mFirebaseDatabase.getReference().child("Seller_Items");
     private DatabaseReference allItems = mFirebaseDatabase.getReference().child("All_Items");
+    private DatabaseReference sellerDetails = mFirebaseDatabase.getReference().child("Seller");
+    private DatabaseReference getDetails;
     private StorageReference storageReference;
     private StorageReference allItemReference;
 
@@ -72,6 +81,24 @@ public class AddProduct extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference("Seller_Items");
         allItemReference = FirebaseStorage.getInstance().getReference("All_Item_Images");
+
+        sellerDetails.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                sellerName = snapshot.child("sellerName").getValue().toString();
+                sellerEmail = snapshot.child("sellerEmail").getValue().toString();
+                sellerShopName = snapshot.child("shopName").getValue().toString();
+                sellerPhoneNumber = snapshot.child("phoneNumber").getValue().toString();
+                sellerAddress = snapshot.child("shopAddress").getValue().toString();
+                type = snapshot.child("type").getValue().toString();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         mProgressDialog = new ProgressDialog(getActivity());
         home = new HomePage();
 
@@ -138,9 +165,10 @@ public class AddProduct extends Fragment {
                             String url = uri.toString();
                             StorageReference imageRef4 = storageReference.child(mAuth.getCurrentUser().getUid()).child(System.currentTimeMillis() + "." + GetFileExtension(imageUri));
                             imageRef4.putFile(imageUri);
-                            Item newItem = new Item(itemId, name, productPrice, productQuantity, url);
+                            Item newItem = new Item(itemId, name, productPrice, productQuantity, url, sellerName, sellerEmail, sellerPhoneNumber, sellerShopName, sellerAddress, type);
                             allItems.child(itemId).setValue(newItem);
                             mReference.child(mAuth.getCurrentUser().getUid()).child(itemId).setValue(newItem);
+
                             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                             transaction.replace(R.id.main_frame, home);
                             transaction.addToBackStack(null);

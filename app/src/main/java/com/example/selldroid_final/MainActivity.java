@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     // Fragments
-    private Fragment mFragment = new UserProfile();
+    private Fragment mFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +42,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         progress = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
+        mFragment = new UserProfile();
         // check user already logged in
         if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), SellerHome.class));
+            startActivity(new Intent(getApplicationContext(), UserHome.class));
         }
         userLogin();
     }
@@ -83,9 +84,10 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             progress.dismiss();
                             Toast.makeText(getApplicationContext(),"Login Susccessful",Toast.LENGTH_SHORT).show();
-                            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                            transaction.replace(R.id.main_frame,mFragment);
-                            transaction.commit();
+                            startActivity(new Intent(getApplicationContext(), UserHome.class));
+//                            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                            transaction.replace(R.id.main_frame,mFragment);
+//                            transaction.commit();
                         } else {
                             progress.dismiss();
                             Toast.makeText(getApplicationContext(),"Email or Password was Incorrect",Toast.LENGTH_SHORT).show();

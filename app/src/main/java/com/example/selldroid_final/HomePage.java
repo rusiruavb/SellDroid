@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,10 +26,12 @@ public class HomePage extends Fragment {
     private DatabaseReference reference = database.getReference().child("All_Items");
     private FirebaseRecyclerOptions<Item> options;
     private FirebaseRecyclerAdapter<Item, HomepageViewHolder> adapter;
+    private ProductPage productPage;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home_page, container, false);
+        productPage = new ProductPage();
         itemRecyclerView = view.findViewById(R.id.item_recycler_view);
         database = FirebaseDatabase.getInstance();
         itemRecyclerView.setHasFixedSize(true);
@@ -37,11 +40,34 @@ public class HomePage extends Fragment {
         options = new FirebaseRecyclerOptions.Builder<Item>().setQuery(reference, Item.class).build();
         adapter = new FirebaseRecyclerAdapter<Item, HomepageViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull final HomepageViewHolder holder, int position, @NonNull Item model) {
+            protected void onBindViewHolder(@NonNull final HomepageViewHolder holder, int position, @NonNull final Item model) {
                 holder.itemName.setText(model.getName());
                 holder.itemPrice.setText(model.getPrice());
                 holder.itemQuantity.setText(model.getQuantity());
                 Picasso.get().load(model.getImageUri()).into(holder.itemImage);
+
+                holder.itemCard.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Bundle bundle = new Bundle();
+                        bundle.putString("itemImage", model.getImageUri());
+                        bundle.putString("itemName", model.getName());
+                        bundle.putString("itemPrice", model.getPrice());
+                        bundle.putString("itemQuantity", model.getQuantity());
+                        bundle.putString("sellerName", model.getSellerName());
+                        bundle.putString("sellerEmail", model.getSellerEmail());
+                        bundle.putString("sellerPhoneNumber", model.getSellerPhoneNumber());
+                        bundle.putString("shopName", model.getShopName());
+                        bundle.putString("shopAddress", model.getShopAddress());
+                        bundle.putString("type", model.getType());
+                        productPage.setArguments(bundle);
+
+                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.main_frame, productPage);
+                        transaction.addToBackStack(null);
+                        transaction.commit();
+                    }
+                });
             }
 
             @NonNull

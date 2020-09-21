@@ -26,12 +26,20 @@
                 android:textSize="36dp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/login_image"/>
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/login_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_login_email"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="12dp"
+                android:background="@drawable/custom_input"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -42,11 +50,14 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_login_password"
+                android:drawableStart="@drawable/ic_password"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="15dp" />
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:text="LOGIN"
                 android:textSize="18dp"

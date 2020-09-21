@@ -11,25 +11,37 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/register_as_sellerB"
                 android:textColor="@color/textColor"
                 android:textSize="32dp"
-                android:gravity="center"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/seller_register" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/seller_register_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="12dp"
                 android:hint="@string/enter_your_nameB"
                 android:inputType="text"
                 android:maxLines="1"
@@ -39,7 +51,12 @@
                 android:id="@+id/seller_register_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="12dp"
                 android:hint="@string/enter_your_email_addressB"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
@@ -49,7 +66,12 @@
                 android:id="@+id/seller_shop_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_cart"
+                android:drawablePadding="12dp"
                 android:hint="@string/enter_company_shop_nameB"
                 android:inputType="text"
                 android:maxLines="1"
@@ -59,7 +81,12 @@
                 android:id="@+id/seller_shop_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_address"
+                android:drawablePadding="12dp"
                 android:hint="@string/enter_company_shop_addressB"
                 android:inputType="text"
                 android:maxLines="1"
@@ -69,7 +96,12 @@
                 android:id="@+id/seller_register_pNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="12dp"
                 android:hint="@string/enter_phone_numberB"
                 android:inputType="number"
                 android:maxLines="1"
@@ -79,7 +111,12 @@
                 android:id="@+id/seller_register_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="12dp"
                 android:hint="@string/enter_new_passwordB"
                 android:inputType="textPassword"
                 android:maxLines="1"
@@ -89,34 +126,42 @@
                 android:id="@+id/seller_register_conformPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_conform_password"
+                android:drawablePadding="12dp"
                 android:hint="@string/confirm_passwordB"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="15dp" />
+
             <Button
-                android:layout_width="match_parent"
+                android:id="@+id/seller_register_button"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="@string/create_new_accountB"
-                android:textSize="18dp"
-                android:background="@drawable/button_background"
-                android:layout_margin="10dp"
                 android:width="45dp"
+                android:background="@drawable/button_background"
                 android:padding="15dp"
-                android:id="@+id/seller_register_button"/>
+                android:text="@string/create_new_accountB"
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/seller_register_to_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_marginTop="10dp"
                 android:text="@string/already_has_an_accountB" />
+
             <TextView
+                android:id="@+id/seller_register_cancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cancel"
                 android:gravity="center"
-                android:id="@+id/seller_register_cancel"/>
+                android:layout_marginTop="5dp"
+                android:text="Cancel" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

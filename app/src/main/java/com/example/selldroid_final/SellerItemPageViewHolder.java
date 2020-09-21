@@ -6,7 +6,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class SellerItemPageViewHolder extends RecyclerView.ViewHolder {
@@ -19,9 +18,9 @@ public class SellerItemPageViewHolder extends RecyclerView.ViewHolder {
 
     public SellerItemPageViewHolder(@NonNull final View itemView) {
         super(itemView);
-        sellerItemImage = itemView.findViewById(R.id.display_seller_product_image);
-        sellerItemName = itemView.findViewById(R.id.display_seller_item_name);
-        sellerItemPrice = itemView.findViewById(R.id.display_seller_item_price);
+        sellerItemImage = itemView.findViewById(R.id.display_cart_product_image);
+        sellerItemName = itemView.findViewById(R.id.display_cart_item_name);
+        sellerItemPrice = itemView.findViewById(R.id.display_cart_item_price);
         sellerItemQuantity = itemView.findViewById(R.id.display_seller_item_quantity);
         sellterItemCard = itemView.findViewById(R.id.seller_item_card);
     }

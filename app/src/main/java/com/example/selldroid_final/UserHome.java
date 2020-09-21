@@ -49,7 +49,7 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
         updateUserProfileFragment = new UserProfileUpdate();
         addPayment = new AddPaymentMethod();
         homePage = new HomePage();
-        setFragment(userProfileFragment);
+        setFragment(homePage);
     }
 
     private void setFragment(Fragment fragment) {
@@ -89,7 +89,7 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
                 fragment = new AddPaymentMethod();
                 break;
             case R.id.nav_user_cart:
-                fragment = new Cart();
+                fragment = new CartItems();
                 break;
             case R.id.nav_home:
                 fragment = new HomePage();

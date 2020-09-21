@@ -69,6 +69,7 @@ public class SellerRegister extends AppCompatActivity {
                 final String phone_number = phoneNumber.getText().toString().trim();
                 final String pass_word = password.getText().toString().trim();
                 final String confirm_password = confirmPassword.getText().toString().trim();
+                final String type = "seller";
 
                 if (TextUtils.isEmpty(seller_name)) {
                     sellerName.setError("Please enter seller name");
@@ -110,7 +111,7 @@ public class SellerRegister extends AppCompatActivity {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Registration Success", Toast.LENGTH_LONG).show();
                             userId = auth.getCurrentUser().getUid();
-                            Seller seller = new Seller(seller_name, seller_email, shop_name, shop_address, phone_number, pass_word);
+                            Seller seller = new Seller(seller_name, seller_email, shop_name, shop_address, phone_number, pass_word, type);
                             collection.child(userId).setValue(seller);
                             startActivity(new Intent(getApplicationContext(), SellerHome.class));
                         } else {

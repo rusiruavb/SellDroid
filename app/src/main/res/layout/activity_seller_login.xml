@@ -23,12 +23,21 @@
                 android:textStyle="bold"
                 android:textSize="36dp"
                 android:textColor="@color/textColor"/>
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/seller_login"/>
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:padding="15dp"
                 android:hint="@string/email_seller_login"
+                android:drawableStart="@drawable/ic_email"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
                 android:maxLines="1"
                 android:inputType="textEmailAddress"
                 android:id="@+id/login_seller_email"/>
@@ -38,13 +47,16 @@
                 android:layout_margin="10dp"
                 android:padding="15dp"
                 android:hint="@string/password_seller_login"
+                android:drawableStart="@drawable/ic_password"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:id="@+id/login_seller_password"/>
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="LOGIN"
+                android:text="LOGIN AS SELLER"
                 android:textSize="18dp"
                 android:background="@drawable/button_background"
                 android:layout_margin="10dp"

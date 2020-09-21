@@ -27,6 +27,11 @@
                 android:textSize="32dp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/register_user" />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:paddingTop="60dp"
                 android:id="@+id/register_name"
@@ -34,6 +39,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_register_name"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="12dp"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -44,6 +52,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_register_email"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="12dp"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -54,6 +65,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_register_phone"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="12dp"
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -64,6 +78,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_register_pass"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="12dp"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -74,11 +91,14 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_register_confirmPass"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_conform_password"
+                android:drawablePadding="12dp"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="15dp" />
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:text="create new account"
                 android:textSize="18dp"
@@ -97,6 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Register As Seller"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:id="@+id/register_as_seller"/>
         </LinearLayout>

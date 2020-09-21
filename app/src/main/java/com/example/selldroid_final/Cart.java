@@ -1,18 +1,45 @@
 package com.example.selldroid_final;
 
-import android.os.Bundle;
+public class Cart {
+    private String cartId;
+    private String itemName;
+    private String itemPrice;
+    private String itemImage;
+    private int itemQuantity;
+    private int totalPrice;
 
-import androidx.fragment.app.Fragment;
+    public Cart() {}
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+    public Cart(String cartId, String itemName, String itemPrice, String itemImage, int itemQuantity, int totalPrice) {
+        this.cartId = cartId;
+        this.itemName = itemName;
+        this.itemPrice = itemPrice;
+        this.itemImage = itemImage;
+        this.itemQuantity = itemQuantity;
+        this.totalPrice = totalPrice;
+    }
 
-public class Cart extends Fragment {
+    public String getCartId() {
+        return cartId;
+    }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_cart, container, false);
-        return view;
+    public String getItemName() {
+        return itemName;
+    }
+
+    public String getItemPrice() {
+        return itemPrice;
+    }
+
+    public String getItemImage() {
+        return itemImage;
+    }
+
+    public int getItemQuantity() {
+        return itemQuantity;
+    }
+
+    public int getTotalPrice() {
+        return totalPrice;
     }
 }

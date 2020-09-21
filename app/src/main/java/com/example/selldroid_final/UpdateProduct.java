@@ -160,10 +160,10 @@ public class UpdateProduct extends Fragment {
                             String url = uri.toString();
                             StorageReference imageRef5 = storageReference.child(auth.getCurrentUser().getUid()).child(System.currentTimeMillis() + "." + GetFileExtension(imageUri));
                             imageRef5.putFile(imageUri); // change the variable name from imageRef4 to imageRef 5
-                            Item newItem = new Item(itemId, name, productPrice, productQuantity, url);
-
-                            allItems.child(bundle.getString("itemId")).setValue(newItem);
-                            reference.child(auth.getCurrentUser().getUid()).child(bundle.getString("itemId")).setValue(newItem);
+//                            Item newItem = new Item(itemId, name, productPrice, productQuantity, url);
+//
+//                            allItems.child(bundle.getString("itemId")).setValue(newItem);
+//                            reference.child(auth.getCurrentUser().getUid()).child(bundle.getString("itemId")).setValue(newItem);
 
                             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                             transaction.replace(R.id.main_frame, home);
