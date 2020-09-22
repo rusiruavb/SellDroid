@@ -58,6 +58,7 @@ public class SellerProfile extends Fragment {
     private DatabaseReference reference = database.getReference().child("Seller");
     private DatabaseReference sellerItemReference = database.getReference().child("Seller_Items");
     private DatabaseReference sellerItem;
+    private DatabaseReference sellerRef;
 
     private String sellerName;
     private String sellerEmail;
@@ -84,7 +85,7 @@ public class SellerProfile extends Fragment {
         auth = FirebaseAuth.getInstance();
         dialog = new ProgressDialog(getContext());
         profileStoreage = FirebaseStorage.getInstance().getReference("Seller_Profile_images");
-        reference = reference.child(auth.getCurrentUser().getUid());
+        sellerRef = reference.child(auth.getCurrentUser().getUid());
         sellerItem = sellerItemReference.child(auth.getCurrentUser().getUid());
 
         sellingItemsRecycleView.setHasFixedSize(true);
@@ -108,7 +109,7 @@ public class SellerProfile extends Fragment {
             }
         };
 
-        reference.addValueEventListener(new ValueEventListener() {
+        sellerRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 sellerName = snapshot.child("sellerName").getValue().toString();
@@ -145,7 +146,7 @@ public class SellerProfile extends Fragment {
     }
 
     private void loadProfile() {
-        reference.addValueEventListener(new ValueEventListener() {
+        sellerRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 displaySellerName.setText(snapshot.child("sellerName").getValue().toString());
@@ -184,7 +185,7 @@ public class SellerProfile extends Fragment {
                             public void onSuccess(Uri uri) {
                                 String url = uri.toString();
                                 Seller updateSeller = new Seller(sellerName, sellerEmail, shopName, address, sellerPhoneNumber, password, type, url);
-                                reference.setValue(updateSeller);
+                                reference.child(auth.getCurrentUser().getUid()).setValue(updateSeller);
                                 Toast.makeText(getContext(), "Image added", Toast.LENGTH_SHORT).show();
                             }
                         });
@@ -208,7 +209,7 @@ public class SellerProfile extends Fragment {
             public void onClick(View view) {
                 auth.signOut();
                 Toast.makeText(getContext(), "You are now sign out", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getContext(), MainActivity.class));
+                startActivity(new Intent(getContext(), SellerLogin.class));
             }
         });
     }
