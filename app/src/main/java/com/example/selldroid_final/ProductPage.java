@@ -32,7 +32,7 @@ public class ProductPage extends Fragment {
     private TextView sellerPhoneNumber;
     private TextView sellerAddress;
     private Button addToCartButton;
-    private Button buyNowButton;
+    private TextView productDescription;
     private Bundle bundle;
 
     private FirebaseAuth auth;
@@ -44,6 +44,7 @@ public class ProductPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_product_page, container, false);
         bundle = this.getArguments();
+        productDescription = view.findViewById(R.id.display_product_description);
         productImage = view.findViewById(R.id.product_display_image);
         productName = view.findViewById(R.id.product_display_name);
         productPrice = view.findViewById(R.id.product_display_price);
@@ -54,7 +55,7 @@ public class ProductPage extends Fragment {
         sellerPhoneNumber = view.findViewById(R.id.product_display_seller_phone_number);
         sellerAddress = view.findViewById(R.id.product_display_seller_address);
         addToCartButton = view.findViewById(R.id.product_display_add_to_cart_button);
-        buyNowButton = view.findViewById(R.id.product_display_buy_now_button);
+
 
         auth = FirebaseAuth.getInstance();
         cartReference = cartReference.child(auth.getCurrentUser().getUid());
@@ -94,5 +95,6 @@ public class ProductPage extends Fragment {
         sellerStoreName.setText(bundle.getString("shopName"));
         sellerPhoneNumber.setText(bundle.getString("sellerPhoneNumber"));
         sellerAddress.setText(bundle.getString("shopAddress"));
+        productDescription.setText(bundle.getString("description"));
     }
 }

@@ -30,6 +30,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/productName"
+                android:drawablePadding="12dp"
+                android:background="@drawable/custom_input"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -40,6 +42,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/price"
+                android:drawablePadding="12dp"
+                android:background="@drawable/custom_input"
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -50,9 +54,22 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/quantity"
+                android:drawablePadding="12dp"
+                android:background="@drawable/custom_input"
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp" />
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/add_product_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Description"
+                android:drawablePadding="12dp"
+                android:padding="15dp"
+                android:background="@drawable/custom_input"
+                />
 
             <ImageView
                 android:id="@+id/add_product_image"

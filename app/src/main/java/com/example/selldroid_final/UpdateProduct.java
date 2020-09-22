@@ -47,6 +47,7 @@ public class UpdateProduct extends Fragment {
     private EditText updateItemName;
     private EditText updateItemPrice;
     private EditText updateItemQuantity;
+    private EditText updateItemDescription;
     private ImageView updateItemImage;
     private Button updateProductButton;
     private Button deleteProductButton;
@@ -71,10 +72,12 @@ public class UpdateProduct extends Fragment {
     private String sellerPhone;
     private String shopName;
     private String address;
+    private String description;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_update_product, container, false);
+        updateItemDescription = view.findViewById(R.id.update_product_description);
         updateItemName = view.findViewById(R.id.update_product_name);
         updateItemPrice = view.findViewById(R.id.update_product_price);
         updateItemQuantity = view.findViewById(R.id.update_product_quantity);
@@ -172,6 +175,7 @@ public class UpdateProduct extends Fragment {
                     final String productQuantity = updateItemQuantity.getText().toString().trim();
                     final String itemId = bundle.getString("itemId");
                     final String imageUrl = bundle.getString("itemUrl");
+                    final String itemDescription = updateItemDescription.getText().toString().trim();
                     final String type = "seller";
 
 
@@ -181,7 +185,7 @@ public class UpdateProduct extends Fragment {
                             String url = uri.toString();
                             StorageReference imageRef5 = storageReference.child(auth.getCurrentUser().getUid()).child(System.currentTimeMillis() + "." + GetFileExtension(imageUri));
                             imageRef5.putFile(imageUri); // change the variable name from imageRef4 to imageRef 5
-                            Item newItem = new Item(itemId, name, productPrice, productQuantity, url, sellerName, sellerEmail, sellerPhone, shopName, address, type);
+                            Item newItem = new Item(itemId, name, productPrice, productQuantity, url, sellerName, sellerEmail, sellerPhone, shopName, address, type, itemDescription);
 
                             allItems.child(bundle.getString("itemId")).setValue(newItem);
                             reference.child(auth.getCurrentUser().getUid()).child(bundle.getString("itemId")).setValue(newItem);
@@ -226,6 +230,7 @@ public class UpdateProduct extends Fragment {
         updateItemName.setText(bundle.getString("itemName"));
         updateItemPrice.setText(bundle.getString("itemPrice"));
         updateItemQuantity.setText(bundle.getString("itemQuantity"));
+        updateItemDescription.setText(bundle.getString("itemDescription"));
         Picasso.get().load(bundle.getString("itemUrl")).into(updateItemImage);
     }
 

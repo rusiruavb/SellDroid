@@ -60,6 +60,7 @@ public class SellerItems extends Fragment {
                         bundle.putString("itemPrice", model.getPrice());
                         bundle.putString("itemQuantity", model.getQuantity());
                         bundle.putString("itemUrl", model.getImageUri());
+                        bundle.putString("itemDescription", model.getDescription());
                         updateProduct.setArguments(bundle);
 
                         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();

@@ -31,6 +31,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/ProductName"
+                android:drawablePadding="12dp"
+                android:background="@drawable/custom_input"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -41,6 +43,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/PRice"
+                android:drawablePadding="12dp"
+                android:background="@drawable/custom_input"
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -52,8 +56,22 @@
                 android:layout_margin="10dp"
                 android:hint="@string/Quantity"
                 android:inputType="number"
+                android:drawablePadding="12dp"
+                android:background="@drawable/custom_input"
                 android:maxLines="1"
                 android:padding="15dp" />
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/update_product_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Description"
+                android:drawablePadding="12dp"
+                android:padding="15dp"
+                android:background="@drawable/custom_input"
+                />
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/update_product_image"
                 android:layout_width="match_parent"

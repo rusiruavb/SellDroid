@@ -60,6 +60,7 @@ public class HomePage extends Fragment {
                         bundle.putString("shopName", model.getShopName());
                         bundle.putString("shopAddress", model.getShopAddress());
                         bundle.putString("type", model.getType());
+                        bundle.putString("description", model.getDescription());
                         productPage.setArguments(bundle);
 
                         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();

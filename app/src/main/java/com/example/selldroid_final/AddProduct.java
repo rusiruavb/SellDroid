@@ -42,6 +42,7 @@ import java.io.IOException;
 
 public class AddProduct extends Fragment {
 
+    private EditText description;
     private EditText productName;
     private EditText price;
     private EditText quantity;
@@ -73,6 +74,8 @@ public class AddProduct extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_add_product, container, false);
+
+        description = view.findViewById(R.id.add_product_description);
         productName = view.findViewById(R.id.add_product_name);
         price = view.findViewById(R.id.add_product_price);
         quantity = view.findViewById(R.id.add_product_quantity);
@@ -154,6 +157,7 @@ public class AddProduct extends Fragment {
                     final String name = productName.getText().toString().trim();
                     final String productPrice = price.getText().toString().trim();
                     final String productQuantity = quantity.getText().toString().trim();
+                    final String desc = description.getText().toString().trim();
                     final String itemId = mReference.push().getKey();
 
                     mProgressDialog.dismiss();
@@ -165,7 +169,7 @@ public class AddProduct extends Fragment {
                             String url = uri.toString();
                             StorageReference imageRef4 = storageReference.child(mAuth.getCurrentUser().getUid()).child(System.currentTimeMillis() + "." + GetFileExtension(imageUri));
                             imageRef4.putFile(imageUri);
-                            Item newItem = new Item(itemId, name, productPrice, productQuantity, url, sellerName, sellerEmail, sellerPhoneNumber, sellerShopName, sellerAddress, type);
+                            Item newItem = new Item(itemId, name, productPrice, productQuantity, url, sellerName, sellerEmail, sellerPhoneNumber, sellerShopName, sellerAddress, type, desc);
                             allItems.child(itemId).setValue(newItem);
                             mReference.child(mAuth.getCurrentUser().getUid()).child(itemId).setValue(newItem);
 

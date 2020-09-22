@@ -12,10 +12,11 @@ public class Item {
     private String shopName;
     private String shopAddress;
     private String type;
+    private String description;
 
     public Item() {}
 
-    public Item(String itemId, String name, String price, String quantity, String imageUri, String sellerName, String sellerEmail, String sellerPhoneNumber, String shopName, String shopAddress, String type) {
+    public Item(String itemId, String name, String price, String quantity, String imageUri, String sellerName, String sellerEmail, String sellerPhoneNumber, String shopName, String shopAddress, String type, String description) {
         this.itemId = itemId;
         this.name = name;
         this.price = price;
@@ -27,6 +28,7 @@ public class Item {
         this.shopName = shopName;
         this.shopAddress = shopAddress;
         this.type = type;
+        this.description = description;
     }
 
     public String getItemId() {
@@ -71,5 +73,9 @@ public class Item {
 
     public String getType() {
         return type;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }
