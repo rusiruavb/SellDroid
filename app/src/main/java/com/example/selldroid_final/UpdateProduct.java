@@ -62,8 +62,15 @@ public class UpdateProduct extends Fragment {
     private FirebaseAuth auth;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference reference = database.getReference().child("Seller_Items");
+    private DatabaseReference sellerReference = database.getReference().child("Seller");
     private DatabaseReference itemReference;
     private DatabaseReference allItems = database.getReference().child("All_Items");
+
+    private String sellerName;
+    private String sellerEmail;
+    private String sellerPhone;
+    private String shopName;
+    private String address;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -82,6 +89,8 @@ public class UpdateProduct extends Fragment {
         home = new HomePage();
         sellerItems = new SellerItems();
         itemReference = reference.child(auth.getCurrentUser().getUid());
+        sellerReference = sellerReference.child(auth.getCurrentUser().getUid());
+
 
         displayItemDetails(); // this is display previous item data on the input fields
 
@@ -138,6 +147,22 @@ public class UpdateProduct extends Fragment {
             mProgressDialog.setMessage("Updating Item...");
             mProgressDialog.show();
 
+            sellerReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    sellerName = snapshot.child("sellerName").getValue().toString();
+                    sellerEmail = snapshot.child("sellerEmail").getValue().toString();
+                    sellerPhone = snapshot.child("phoneNumber").getValue().toString();
+                    shopName = snapshot.child("shopName").getValue().toString();
+                    address = snapshot.child("shopAddress").getValue().toString();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
             final StorageReference imageRef4 = allItemReference.child(System.currentTimeMillis() + "." + GetFileExtension(imageUri));
             imageRef4.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
@@ -147,12 +172,8 @@ public class UpdateProduct extends Fragment {
                     final String productQuantity = updateItemQuantity.getText().toString().trim();
                     final String itemId = bundle.getString("itemId");
                     final String imageUrl = bundle.getString("itemUrl");
+                    final String type = "seller";
 
-                    System.out.println(itemId);
-                    imageRef4.delete();
-
-                    mProgressDialog.dismiss();
-                    Toast.makeText(getContext(), "Item Updated", Toast.LENGTH_LONG).show();
 
                     imageRef4.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
@@ -160,10 +181,13 @@ public class UpdateProduct extends Fragment {
                             String url = uri.toString();
                             StorageReference imageRef5 = storageReference.child(auth.getCurrentUser().getUid()).child(System.currentTimeMillis() + "." + GetFileExtension(imageUri));
                             imageRef5.putFile(imageUri); // change the variable name from imageRef4 to imageRef 5
-//                            Item newItem = new Item(itemId, name, productPrice, productQuantity, url);
-//
-//                            allItems.child(bundle.getString("itemId")).setValue(newItem);
-//                            reference.child(auth.getCurrentUser().getUid()).child(bundle.getString("itemId")).setValue(newItem);
+                            Item newItem = new Item(itemId, name, productPrice, productQuantity, url, sellerName, sellerEmail, sellerPhone, shopName, address, type);
+
+                            allItems.child(bundle.getString("itemId")).setValue(newItem);
+                            reference.child(auth.getCurrentUser().getUid()).child(bundle.getString("itemId")).setValue(newItem);
+
+                            mProgressDialog.dismiss();
+                            Toast.makeText(getContext(), "Item Updated", Toast.LENGTH_LONG).show();
 
                             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                             transaction.replace(R.id.main_frame, home);

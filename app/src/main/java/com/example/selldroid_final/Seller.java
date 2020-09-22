@@ -4,6 +4,7 @@ import android.widget.EditText;
 
 public class Seller {
 
+    private String profileImage;
     private String sellerName;
     private String sellerEmail;
     private String shopName;
@@ -12,7 +13,7 @@ public class Seller {
     private String password;
     private String type;
 
-    public Seller(String sellerName, String sellerEmail, String shopName, String shopAddress, String phoneNumber, String password, String type) {
+    public Seller(String sellerName, String sellerEmail, String shopName, String shopAddress, String phoneNumber, String password, String type, String profileImage) {
         this.sellerName = sellerName;
         this.sellerEmail = sellerEmail;
         this.shopName = shopName;
@@ -20,6 +21,7 @@ public class Seller {
         this.phoneNumber = phoneNumber;
         this.password = password;
         this.type = type;
+        this.profileImage = profileImage;
     }
 
     public String getSellerName() {
@@ -47,4 +49,8 @@ public class Seller {
     }
 
     public String getType() { return  type; }
+
+    public String getProfileImage() {
+        return profileImage;
+    }
 }

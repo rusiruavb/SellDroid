@@ -19,7 +19,7 @@ public class PaymentMethodViewHolder extends RecyclerView.ViewHolder {
 
     public PaymentMethodViewHolder(@NonNull View itemView) {
         super(itemView);
-        cardNumber = itemView.findViewById(R.id.display_payment_number);
+        cardNumber = itemView.findViewById(R.id.seller_profile_item_name);
         cardHolderName = itemView.findViewById(R.id.display_payment_holder_name);
         paymentUserPhoneNumber = itemView.findViewById(R.id.display_payment_phone_number);
         validationPeriod = itemView.findViewById(R.id.display_payment_validation_period);

@@ -57,10 +57,10 @@
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/textColor"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/display_payment_number" />
+                app:layout_constraintTop_toBottomOf="@+id/seller_profile_item_name" />
 
             <TextView
-                android:id="@+id/display_payment_number"
+                android:id="@+id/seller_profile_item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"

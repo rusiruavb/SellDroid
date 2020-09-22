@@ -70,6 +70,7 @@ public class SellerRegister extends AppCompatActivity {
                 final String pass_word = password.getText().toString().trim();
                 final String confirm_password = confirmPassword.getText().toString().trim();
                 final String type = "seller";
+                final String profileImage = "https://firebasestorage.googleapis.com/v0/b/selldroid-final.appspot.com/o/Seller_Profile_images%2Fdefault_profile_image.png?alt=media&token=9c3e6a6e-04da-47bf-a36b-3a53ca7ae14c";
 
                 if (TextUtils.isEmpty(seller_name)) {
                     sellerName.setError("Please enter seller name");
@@ -111,7 +112,7 @@ public class SellerRegister extends AppCompatActivity {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Registration Success", Toast.LENGTH_LONG).show();
                             userId = auth.getCurrentUser().getUid();
-                            Seller seller = new Seller(seller_name, seller_email, shop_name, shop_address, phone_number, pass_word, type);
+                            Seller seller = new Seller(seller_name, seller_email, shop_name, shop_address, phone_number, pass_word, type, profileImage);
                             collection.child(userId).setValue(seller);
                             startActivity(new Intent(getApplicationContext(), SellerHome.class));
                         } else {

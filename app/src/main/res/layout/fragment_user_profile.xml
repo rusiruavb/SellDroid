@@ -173,7 +173,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView27" />
     <TextView
-        android:id="@+id/value_user_name"
+        android:id="@+id/display_seller_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -186,7 +186,7 @@
         app:layout_constraintStart_toEndOf="@+id/user_image"
         app:layout_constraintTop_toTopOf="@+id/user_image" />
     <TextView
-        android:id="@+id/value_user_email"
+        android:id="@+id/display_seller_company"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -195,9 +195,9 @@
         android:textColor="@color/textColorWhite"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/user_image"
-        app:layout_constraintTop_toBottomOf="@+id/value_user_name" />
+        app:layout_constraintTop_toBottomOf="@+id/display_seller_name" />
     <TextView
-        android:id="@+id/value_user_phone"
+        android:id="@+id/display_seller_phone_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -206,7 +206,7 @@
         android:textColor="@color/textColorWhite"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/user_image"
-        app:layout_constraintTop_toBottomOf="@+id/value_user_email" />
+        app:layout_constraintTop_toBottomOf="@+id/display_seller_company" />
 
 
     <de.hdodenhof.circleimageview.CircleImageView
