@@ -109,26 +109,22 @@ public class SellerProfile extends Fragment {
             }
         };
 
-        if (sellerRef != null) {
-            sellerRef.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    sellerName = snapshot.child("sellerName").getValue().toString();
-                    sellerEmail = snapshot.child("sellerEmail").getValue().toString();
-                    shopName = snapshot.child("shopName").getValue().toString();
-                    sellerPhoneNumber = snapshot.child("phoneNumber").getValue().toString();
-                    address = snapshot.child("shopAddress").getValue().toString();
-                    password = snapshot.child("password").getValue().toString();
-                    type = snapshot.child("type").getValue().toString();
-                }
 
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                }
+        sellerRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                sellerName = snapshot.child("sellerName").getValue().toString();
+                sellerEmail = snapshot.child("sellerEmail").getValue().toString();
+                shopName = snapshot.child("shopName").getValue().toString();
+                sellerPhoneNumber = snapshot.child("phoneNumber").getValue().toString();
+                address = snapshot.child("shopAddress").getValue().toString();
+                password = snapshot.child("password").getValue().toString();
+                type = snapshot.child("type").getValue().toString();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
             });
-        } else {
-            startActivity(new Intent(getContext(), SellerRegister.class));
-        }
 
         sellerProfile.setOnClickListener(new View.OnClickListener() {
             @Override

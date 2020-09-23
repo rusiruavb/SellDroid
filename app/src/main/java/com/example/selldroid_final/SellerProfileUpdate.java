@@ -84,7 +84,7 @@ public class SellerProfileUpdate extends Fragment {
                 alertDialog.setButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
-                        deleteSellerAccount();
+                        //deleteSellerAccount();
                     }
                 });
                 alertDialog.setButton2("No", new DialogInterface.OnClickListener() {

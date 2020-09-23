@@ -89,7 +89,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/seller_profile_items_recycle_view"
         android:layout_width="430dp"
-        android:layout_height="520dp"
+        android:layout_height="500dp"
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

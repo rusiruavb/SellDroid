@@ -16,5 +16,7 @@
     <color name="inputColor">#7130E4</color>
     <color name="deleteButton">#F63C2E</color>
 
+    <color name="sellerBackground">#9365E6</color>
+
 
 </resources>
