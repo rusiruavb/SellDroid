@@ -97,7 +97,7 @@
                 android:width="45dp"
                 android:background="@drawable/button_background"
                 android:padding="15dp"
-                android:text="Update"
+                android:text="update"
                 android:textSize="18dp" />
             <Button
                 android:id="@+id/delete_seller_account"

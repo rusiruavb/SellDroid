@@ -109,24 +109,26 @@ public class SellerProfile extends Fragment {
             }
         };
 
-        sellerRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                sellerName = snapshot.child("sellerName").getValue().toString();
-                sellerEmail = snapshot.child("sellerEmail").getValue().toString();
-                shopName = snapshot.child("shopName").getValue().toString();
-                sellerPhoneNumber = snapshot.child("phoneNumber").getValue().toString();
-                address = snapshot.child("shopAddress").getValue().toString();
-                password = snapshot.child("password").getValue().toString();
-                type = snapshot.child("type").getValue().toString();
+        if (sellerRef != null) {
+            sellerRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    sellerName = snapshot.child("sellerName").getValue().toString();
+                    sellerEmail = snapshot.child("sellerEmail").getValue().toString();
+                    shopName = snapshot.child("shopName").getValue().toString();
+                    sellerPhoneNumber = snapshot.child("phoneNumber").getValue().toString();
+                    address = snapshot.child("shopAddress").getValue().toString();
+                    password = snapshot.child("password").getValue().toString();
+                    type = snapshot.child("type").getValue().toString();
+                }
 
-                // after clicking on add product and redirect to it the app was distroyed
-                // it says null object referece in line 114
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) { }
-        });
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                }
+            });
+        } else {
+            startActivity(new Intent(getContext(), SellerRegister.class));
+        }
 
         sellerProfile.setOnClickListener(new View.OnClickListener() {
             @Override
