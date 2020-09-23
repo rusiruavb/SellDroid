@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         // check user already logged in
 
         if (mAuth.getCurrentUser() != null) {
-//            startActivity(new Intent(getApplicationContext(), UserHome.class));
+            startActivity(new Intent(getApplicationContext(), SellerHome.class));
 //            sellerRef.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
 //                @Override
 //                public void onDataChange(@NonNull DataSnapshot snapshot) {
