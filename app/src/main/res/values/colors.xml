@@ -9,11 +9,11 @@
     <color name="buttonAddToCartColor">#DD2196F3</color>
     <color name="buttonBuyNowColor">#DD2196F3</color>
     <color name="textColorWhite">#FFFFFF</color>
-    <color name="buttonDeleteBgColor">#E8582B</color>
+    <color name="buttonDeleteBgColor">#EF4510</color>
     <color name="buttonLogoutBgColor">#78AEDA</color>
     <color name="homeBgColor">#E3E3E3</color>
     <color name="inputDisabled">#C5C2C2</color>
-    <color name="inputColor">#7130E4</color>
+    <color name="inputColor">#F35D38</color>
     <color name="deleteButton">#F63C2E</color>
 
     <color name="sellerBackground">#9365E6</color>

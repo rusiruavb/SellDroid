@@ -65,6 +65,7 @@ public class UserRegister extends AppCompatActivity {
                 final String email = userEmail.getText().toString().trim();
                 final String phoneNumber = userPhoneNumber.getText().toString().trim();
                 final String password = password1.getText().toString().trim();
+                final String userImage = "https://firebasestorage.googleapis.com/v0/b/selldroid-final.appspot.com/o/Seller_Profile_images%2Fdefault_profile_image.png?alt=media&token=9c3e6a6e-04da-47bf-a36b-3a53ca7ae14c";
                 String passwordTwo = password2.getText().toString().trim();
 
                 // validation
@@ -103,8 +104,9 @@ public class UserRegister extends AppCompatActivity {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(),"Registration Success",Toast.LENGTH_LONG).show();
                             userId = auth.getCurrentUser().getUid();
-                            User user = new User(name,email,phoneNumber,password);
+                            User user = new User(name,email,phoneNumber,password,userImage);
                             collection.child(userId).setValue(user);
+                            startActivity(new Intent(getApplicationContext(), UserHome.class));
                         } else {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(),"Registration Failed", Toast.LENGTH_SHORT).show();

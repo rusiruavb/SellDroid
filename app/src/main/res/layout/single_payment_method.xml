@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/payment_item"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        android:background="@mipmap/single_cart_item_background">
+
+        <TextView
+            android:id="@+id/payment_item_validation_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Loading..."
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toEndOf="@+id/display_cart_product_image"
+            app:layout_constraintTop_toBottomOf="@+id/payment_item_phone_number" />
+
+        <TextView
+            android:id="@+id/payment_item_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:text="Loading..."
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toEndOf="@+id/display_cart_product_image"
+            app:layout_constraintTop_toBottomOf="@+id/payment_item_name" />
+
+        <ImageView
+            android:id="@+id/display_cart_product_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_payment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/payment_method_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Loading..."
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/textColor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/display_cart_product_image"
+            app:layout_constraintTop_toTopOf="@+id/display_cart_product_image" />
+
+        <TextView
+            android:id="@+id/payment_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Loading..."
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toEndOf="@+id/display_cart_product_image"
+            app:layout_constraintTop_toBottomOf="@+id/payment_method_number" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

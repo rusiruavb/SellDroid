@@ -1,350 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".UserProfile"
-    android:background="@drawable/bg">
-
-    <TextView
-        android:id="@+id/textView43"
-        android:layout_width="41dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="56dp"
-        android:text="@string/user_profile_item6"
-        android:textColor="#100F0F"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView42"
-        app:layout_constraintTop_toTopOf="@+id/textView42" />
-
-    <TextView
-        android:id="@+id/textView42"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/user_profile_cost6"
-        android:textColor="#050505"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView41"
-        app:layout_constraintTop_toTopOf="@+id/textView41" />
-
-    <TextView
-        android:id="@+id/textView41"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/user_profile_date6"
-        android:textColor="#0C0A0A"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView38" />
-
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:text="@string/user_profile_item5"
-        android:textColor="#100F0F"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView39"
-        app:layout_constraintTop_toTopOf="@+id/textView39" />
-
-    <TextView
-        android:id="@+id/textView39"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/user_profile_cost5"
-        android:textColor="#050505"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView38"
-        app:layout_constraintTop_toTopOf="@+id/textView38" />
-
-    <TextView
-        android:id="@+id/textView38"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/user_profile_date5"
-        android:textColor="#0C0A0A"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView35" />
-
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:text="@string/user_profile_item4"
-        android:textColor="#100F0F"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView36"
-        app:layout_constraintTop_toTopOf="@+id/textView36" />
-
-    <TextView
-        android:id="@+id/textView36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/user_profile_cost4"
-        android:textColor="#050505"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView35"
-        app:layout_constraintTop_toTopOf="@+id/textView35" />
-
-    <TextView
-        android:id="@+id/textView35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/user_profile_date4"
-        android:textColor="#0C0A0A"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView29" />
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/user_profile_cost2"
-        android:textColor="#050505"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView27"
-        app:layout_constraintTop_toTopOf="@+id/textView27" />
-    <TextView
-        android:id="@+id/textView34"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:text="@string/user_profile_item2"
-        android:textColor="#100F0F"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView26"
-        app:layout_constraintTop_toTopOf="@+id/textView26" />
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/user_profile_cost2"
-        android:textColor="#050505"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView27"
-        app:layout_constraintTop_toTopOf="@+id/textView27" />
-
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:text="@string/user_profile_item3"
-        android:textColor="#100F0F"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView30"
-        app:layout_constraintTop_toTopOf="@+id/textView30" />
-
-    <TextView
-        android:id="@+id/textView30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/user_profile_cost3"
-        android:textColor="#050505"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView29"
-        app:layout_constraintTop_toTopOf="@+id/textView29" />
-
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/user_profile_date3"
-        android:textColor="#0C0A0A"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
-    <TextView
-        android:id="@+id/display_seller_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:text="Nimal Jayaweera"
-        android:textColor="@color/textColorWhite"
-        android:textFontWeight="900"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/user_image"
-        app:layout_constraintTop_toTopOf="@+id/user_image" />
-    <TextView
-        android:id="@+id/display_seller_company"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="6dp"
-        android:text="nimal@gamil.com"
-        android:textColor="@color/textColorWhite"
-        android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/user_image"
-        app:layout_constraintTop_toBottomOf="@+id/display_seller_name" />
-    <TextView
-        android:id="@+id/display_seller_phone_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="6dp"
-        android:text="0775563254"
-        android:textColor="@color/textColorWhite"
-        android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/user_image"
-        app:layout_constraintTop_toBottomOf="@+id/display_seller_company" />
+    tools:context=".UserProfile">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/user_image"
-        android:layout_width="132dp"
-        android:layout_height="129dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
-        android:src="@drawable/profile"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="67dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/userProfileDate"
-        android:textColor="#100E0E"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="96dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="64dp"
-        android:text="@string/UserProfileTotalCost"
-        android:textColor="#100E0E"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="82dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="36dp"
-        android:text="@string/UserProfileItem"
-        android:textColor="#100E0E"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/textView6" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="My Items"
-        android:textColor="@color/textColorWhite"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_image" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/user_profile_cost1"
-        android:textColor="#131212"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView24"
-        app:layout_constraintTop_toTopOf="@+id/textView24" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/user_profile_date1"
-        android:textColor="#0C0B0B"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="59dp"
-        android:text="@string/user_profile_Item1"
-        android:textColor="#171414"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView9" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/user_profile_date2"
-        android:textColor="#0C0A0A"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24" />
-
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:text="@string/user_profile_item2"
-        android:textColor="#100F0F"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView26"
-        app:layout_constraintTop_toTopOf="@+id/textView26" />
-
-    <Button
-        android:id="@+id/user_logout_button"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginBottom="24dp"
-        android:width="45dp"
-        android:background="@drawable/button_logout_background"
-        android:padding="15dp"
-        android:text="LOGOUT"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView42"
-        app:layout_constraintVertical_bias="0.876" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/profile_details_card">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_person_profile"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/user_profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Loading..."
+                        android:textColor="#000000"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/user_image" />
+
+                    <TextView
+                        android:id="@+id/user_profile_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Loading..."
+                        android:textColor="#232323"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/user_profile_name" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Your Purchased Items"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/purchased_items_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

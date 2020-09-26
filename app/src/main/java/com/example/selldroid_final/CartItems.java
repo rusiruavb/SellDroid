@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -26,12 +26,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 public class CartItems extends Fragment {
 
     private RecyclerView cartRecycleView;
     private TextView cartTotalPrice;
+    private Button buyNowButton;
     private FirebaseAuth auth;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference reference = database.getReference().child("Cart");
@@ -43,14 +47,17 @@ public class CartItems extends Fragment {
     private int databaseItemQuantityForRemove;
     private int totalSum;
     private int value;
+    private BuyNow buyNow;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
         auth = FirebaseAuth.getInstance();
         cartItems = new CartItems();
-        cartTotalPrice = view.findViewById(R.id.cart_total_price);
+        buyNow = new BuyNow();
+        cartTotalPrice = view.findViewById(R.id.cart_item_price);
         cartRecycleView = view.findViewById(R.id.cart_recycle_view);
+        buyNowButton = view.findViewById(R.id.buy_now_button);
         cartRecycleView.setHasFixedSize(true);
         cartRecycleView.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -114,6 +121,23 @@ public class CartItems extends Fragment {
                 return new CartItemViewHolder(v);
             }
         };
+
+        buyNowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                Date date = new Date();
+                String dateTime = dateFormat.format(date);
+                Bundle bundle = new Bundle();
+                bundle.putString("totalPrice", String.valueOf(sum));
+                bundle.putString("date", dateTime);
+                buyNow.setArguments(bundle);
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.main_frame, buyNow);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
 
         calculateTotal();
         adapter.startListening();

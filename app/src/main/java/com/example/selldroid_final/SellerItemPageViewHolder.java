@@ -19,8 +19,8 @@ public class SellerItemPageViewHolder extends RecyclerView.ViewHolder {
     public SellerItemPageViewHolder(@NonNull final View itemView) {
         super(itemView);
         sellerItemImage = itemView.findViewById(R.id.display_cart_product_image);
-        sellerItemName = itemView.findViewById(R.id.display_cart_item_name);
-        sellerItemPrice = itemView.findViewById(R.id.display_cart_item_price);
+        sellerItemName = itemView.findViewById(R.id.single_payment_method_number);
+        sellerItemPrice = itemView.findViewById(R.id.single_payment_item_name);
         sellerItemQuantity = itemView.findViewById(R.id.display_seller_item_quantity);
         sellterItemCard = itemView.findViewById(R.id.seller_item_card);
     }

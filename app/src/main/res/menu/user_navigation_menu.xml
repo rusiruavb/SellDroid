@@ -28,9 +28,9 @@
                 android:title="My Cart"
                 android:icon="@drawable/ic_cart"/>
             <item
-                android:id="@+id/nav_settings"
-                android:title="Settings"
-                android:icon="@drawable/ic_settings"/>
+                android:id="@+id/nav_user_logout"
+                android:title="Logout"
+                android:icon="@drawable/ic_logout"/>
         </menu>
     </item>
     <item android:title="Social">

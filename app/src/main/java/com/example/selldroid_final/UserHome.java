@@ -9,11 +9,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class UserHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -28,11 +30,14 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
     private AddPaymentMethod addPayment;
     private HomePage homePage;
 
+    private FirebaseAuth auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home);
 
+        auth = FirebaseAuth.getInstance();
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mNavigationView = findViewById(R.id.navigation_view);
         mToolbar = findViewById(R.id.toolbar);
@@ -96,6 +101,10 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
                 break;
             case R.id.nav_payment_methods:
                 fragment = new PaymentMethods();
+                break;
+            case R.id.nav_user_logout:
+                auth.signOut();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 break;
         }
 

@@ -20,17 +20,14 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Add New Payment Method"
+                android:layout_marginBottom="50dp"
                 android:textColor="@color/textColor"
                 android:textSize="32dp"
                 android:textStyle="bold" />
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:src="@drawable/credit_card" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/add_payment_name"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/nameOnTheCard"
@@ -43,7 +40,7 @@
 
             <mostafa.ma.saleh.gmail.com.editcredit.EditCredit
                 android:id="@+id/add_payment_card_number"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 app:disabledCards="visa|amex"
                 android:layout_margin="10dp"
@@ -57,7 +54,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/add_payment_cvv"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/cvv"
@@ -70,7 +67,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/add_payment_validation_period"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/validationPeriod"
@@ -82,7 +79,7 @@
                 android:padding="15dp" />
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/add_payment_phone_number"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/paymentPhoneNumber"
@@ -94,8 +91,9 @@
                 android:padding="15dp" />
             <Button
                 android:id="@+id/add_payment_button"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_margin="10dp"
                 android:width="45dp"
                 android:background="@drawable/button_background"
@@ -106,6 +104,7 @@
                 android:id="@+id/add_payment_cancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="CANCEL" />
         </LinearLayout>
