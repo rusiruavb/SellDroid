@@ -5,78 +5,112 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@drawable/login_background"
+    android:hapticFeedbackEnabled="false"
     tools:context=".MainActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:text="Seller Login"
-                android:textStyle="bold"
-                android:textSize="36dp"
-                android:textColor="@color/textColor"/>
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:src="@drawable/seller_login"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="480dp"
+                android:layout_height="730dp"
+                android:background="@mipmap/login_card"
+                android:textAlignment="center">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="15dp"
-                android:hint="@string/email_seller_login"
-                android:drawableStart="@drawable/ic_email"
-                android:background="@drawable/custom_input"
-                android:drawablePadding="12dp"
-                android:maxLines="1"
-                android:inputType="textEmailAddress"
-                android:id="@+id/login_seller_email"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="15dp"
-                android:hint="@string/password_seller_login"
-                android:drawableStart="@drawable/ic_password"
-                android:background="@drawable/custom_input"
-                android:drawablePadding="12dp"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:id="@+id/login_seller_password"/>
-            <Button
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:text="LOGIN AS SELLER"
-                android:textSize="18dp"
-                android:background="@drawable/button_background"
-                android:layout_margin="10dp"
-                android:width="45dp"
-                android:padding="15dp"
-                android:id="@+id/login_seller_button"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Create new Seller Account"
-                android:padding="5dp"
-                android:gravity="center"
-                android:id="@+id/create_seller_account"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Foget Password"
-                android:padding="5dp"
-                android:gravity="center"
-                android:id="@+id/seller_foget_password"/>
+                <EditText
+                    android:id="@+id/login_seller_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@mipmap/form_input"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="12dp"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/login_seller_email" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="110dp"
+                    android:text="Login As Seller"
+                    android:textColor="@color/textColor"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/login_seller_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/form_input"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="12dp"
+                    android:ems="10"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                <Button
+                    android:id="@+id/login_seller_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/login_button"
+                    android:text="login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/login_seller_password" />
+
+                <TextView
+                    android:id="@+id/seller_foget_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fogot Seller Password"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/login_seller_button" />
+
+                <TextView
+                    android:id="@+id/create_seller_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Create New Seller Account"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/seller_foget_password" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11"
+                    app:srcCompat="@drawable/seller_login" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

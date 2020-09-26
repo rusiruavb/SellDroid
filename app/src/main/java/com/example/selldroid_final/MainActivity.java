@@ -3,7 +3,6 @@ package com.example.selldroid_final;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -19,11 +18,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,35 +49,35 @@ public class MainActivity extends AppCompatActivity {
         mFragment = new UserProfile();
         // check user already logged in
 
-        if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), SellerHome.class));
-//            sellerRef.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
-//                @Override
-//                public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                    String user = snapshot.child("type").getValue().toString();
-//                    System.out.println(user);
+//        if (mAuth.getCurrentUser() != null) {
+//            startActivity(new Intent(getApplicationContext(), SellerHome.class));
+////            sellerRef.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+////                @Override
+////                public void onDataChange(@NonNull DataSnapshot snapshot) {
+////                    String user = snapshot.child("type").getValue().toString();
+////                    System.out.println(user);
+//////
+//////                    if (user.equals("seller")) {
+//////                        startActivity(new Intent(getApplicationContext(), SellerHome.class));
+//////                    } else {
+//////                        startActivity(new Intent(getApplicationContext(), UserHome.class));
+//////                    }
+////                }
 ////
-////                    if (user.equals("seller")) {
-////                        startActivity(new Intent(getApplicationContext(), SellerHome.class));
-////                    } else {
-////                        startActivity(new Intent(getApplicationContext(), UserHome.class));
-////                    }
-//                }
-//
-//                @Override
-//                public void onCancelled(@NonNull DatabaseError error) { }
-//            });
-        }
+////                @Override
+////                public void onCancelled(@NonNull DatabaseError error) { }
+////            });
+//        }
 
         userLogin();
     }
 
     private void userLogin() {
-        loginEmail = findViewById(R.id.login_email);
-        loginPassword = findViewById(R.id.login_password);
-        loginButton = findViewById(R.id.login_button);
-        forgetPassword = findViewById(R.id.foget_password);
-        createAccount = findViewById(R.id.create_account);
+        loginEmail = findViewById(R.id.login_seller_email);
+        loginPassword = findViewById(R.id.login_seller_password);
+        loginButton = findViewById(R.id.login_seller_button);
+        forgetPassword = findViewById(R.id.seller_foget_password);
+        createAccount = findViewById(R.id.create_seller_account);
         loginSeller = findViewById(R.id.login_as_seller);
 
         loginButton.setOnClickListener(new View.OnClickListener() {

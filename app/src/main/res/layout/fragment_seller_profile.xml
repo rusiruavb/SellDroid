@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="480dp"
+        android:layout_height="450dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
@@ -21,7 +21,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@mipmap/seller_items_background">
+            android:background="@drawable/seller_items_background">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/seller_profile_items_recycle_view"
@@ -58,7 +58,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:background="@mipmap/profile_background"
+        android:background="@drawable/profile_details_card"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -126,10 +126,10 @@
 
     <Button
         android:id="@+id/seller_logout_button"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/button_background"
+        android:layout_height="100dp"
+        android:background="@mipmap/login_button"
         android:text="logout"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"

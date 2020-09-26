@@ -33,6 +33,11 @@ public class SellerLogin extends AppCompatActivity {
         setContentView(R.layout.activity_seller_login);
         dialog = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
+
+        if (auth.getCurrentUser() != null) {
+            startActivity(new Intent(getApplicationContext(), SellerHome.class));
+        }
+
         sellerLogin();
     }
 

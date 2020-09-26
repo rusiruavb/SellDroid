@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.selldroid_final"
-        minSdkVersion 23
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -30,14 +30,14 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-database:6.2.0'
     implementation 'com.google.android.material:material:1.3.0-alpha02'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.firebase:firebase-auth:19.3.2'
-    implementation 'com.google.firebase:firebase-database:19.3.1'
-    implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.google.firebase:firebase-auth:19.4.0'
+    implementation 'com.google.firebase:firebase-database:19.4.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
-    compile 'com.github.Mostafa-MA-Saleh:EditCredit:1.6.1'
+    implementation 'com.github.Mostafa-MA-Saleh:EditCredit:1.6.1'
 }
