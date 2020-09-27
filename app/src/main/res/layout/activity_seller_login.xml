@@ -80,7 +80,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/login_seller_password" />
 
                 <TextView
-                    android:id="@+id/seller_foget_password"
+                    android:id="@+id/seller_forget_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fogot Seller Password"
@@ -96,7 +96,7 @@
                     android:text="Create New Seller Account"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/seller_foget_password" />
+                    app:layout_constraintTop_toBottomOf="@+id/seller_forget_password" />
 
                 <ImageView
                     android:id="@+id/imageView2"
