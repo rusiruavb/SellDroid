@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +23,7 @@ public class SellerLogin extends AppCompatActivity {
     private EditText sellerEmail;
     private EditText sellerPassword;
     private Button sellerLoginButton;
+    private TextView sellerForgetPassword;
     private ProgressDialog dialog;
 
     private FirebaseAuth auth;
@@ -31,12 +33,20 @@ public class SellerLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_login);
+        sellerForgetPassword = findViewById(R.id.seller_forget_password);
         dialog = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
 
         if (auth.getCurrentUser() != null) {
             startActivity(new Intent(getApplicationContext(), SellerHome.class));
         }
+
+        sellerForgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SetNewSellerPassword.class));
+            }
+        });
 
         sellerLogin();
     }
