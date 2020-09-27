@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView loginSeller;
     private ProgressDialog progress;
 
-    // Firebase variables
     private FirebaseAuth mAuth;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference userRef = database.getReference().child("Users");
@@ -104,6 +103,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), SellerLogin.class));
+            }
+        });
+
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SetNewUserPassword.class));
             }
         });
     }

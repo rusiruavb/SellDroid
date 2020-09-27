@@ -35,7 +35,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:paddingTop="60dp"
                 android:id="@+id/register_name"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_register_name"
@@ -48,7 +48,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/register_email"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_register_email"
@@ -61,7 +61,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/register_pNumber"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_register_phone"
@@ -74,7 +74,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/register_password"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_register_pass"
@@ -87,7 +87,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/register_conformPassword"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/user_register_confirmPass"

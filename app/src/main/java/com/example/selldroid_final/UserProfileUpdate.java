@@ -2,6 +2,8 @@ package com.example.selldroid_final;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -128,39 +130,20 @@ public class UserProfileUpdate extends Fragment {
         dialog.setMessage("Updating Profile...");
         dialog.show();
 
-        System.out.println(email);
-        System.out.println(currentPassword);
-
-        AuthCredential credential = EmailAuthProvider.getCredential(email, currentPassword);
-
-        System.out.println(auth.getCurrentUser());
-
-        auth.getCurrentUser().reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+        auth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    auth.getCurrentUser().updatePassword(password).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                dialog.dismiss();
-                                User updateUser = new User(name, email, phone, password, image);
-                                userReference.child(auth.getCurrentUser().getUid()).setValue(updateUser);
-                                Toast.makeText(getContext(), "Profile Updated", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                    Toast.makeText(getContext(), "Check Your Gmail", Toast.LENGTH_LONG).show();
 
-                                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                                transaction.replace(R.id.main_frame, new UserProfile());
-                                transaction.addToBackStack(null);
-                                transaction.commit();
-                            } else {
-                                dialog.dismiss();
-                                Toast.makeText(getContext(), "Profile Update Failed", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
+                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.main_frame, new UserProfile());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                 } else {
                     dialog.dismiss();
-                    Toast.makeText(getContext(), "Re-authentication Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Profile Update Failed", Toast.LENGTH_LONG).show();
                 }
             }
         });

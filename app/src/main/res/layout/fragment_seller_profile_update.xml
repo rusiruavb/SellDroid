@@ -25,7 +25,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/update_seller_name"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/nameBM"
@@ -38,7 +38,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/update_seller_email"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/email_addressBM"
@@ -51,7 +51,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/update_seller_company"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
@@ -64,7 +64,7 @@
                 android:padding="15dp" />
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/update_seller_address"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
@@ -78,7 +78,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/update_seller_phoneNum"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/phone_numberBM"
@@ -91,7 +91,7 @@
 
             <Button
                 android:id="@+id/update_seller_button"
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:width="45dp"
@@ -101,7 +101,7 @@
                 android:textSize="18dp" />
             <Button
                 android:id="@+id/delete_seller_account"
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:width="45dp"

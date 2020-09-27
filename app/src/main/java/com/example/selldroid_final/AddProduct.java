@@ -179,43 +179,9 @@ public class AddProduct extends Fragment {
                             transaction.commit();
                         }
                     });
-
-//                    StorageReference imageRef4 = storageReference.child(mAuth.getCurrentUser().getUid()).child(System.currentTimeMillis() + "." + GetFileExtension(imageUri));
-//                    imageRef4.putFile(imageUri);
-//                    Item newItem = new Item(name, productPrice, productQuantity, imgUri);
-//                    String imageUploadId = mReference.push().getKey();
-//
-//                    allItems.child(imageUploadId).setValue(newItem);
-//                    mReference.child(mAuth.getCurrentUser().getUid()).child(imageUploadId).setValue(newItem);
-//                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-//                    transaction.replace(R.id.main_frame, home);
-//                    transaction.commit();
                 }
             });
 
-//            final StorageReference imageRef2 = storageReference.child(mAuth.getCurrentUser().getUid()).child(System.currentTimeMillis() + "." + GetFileExtension(imageUri));
-//            imageRef2.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                @Override
-//                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                    String name = productName.getText().toString().trim();
-//                    String productPrice = price.getText().toString().trim();
-//                    String productQuantity = quantity.getText().toString().trim();
-//                    //String image = taskSnapshot.getUploadSessionUri().toString();
-//                    String imgUri = imageRef2.getDownloadUrl().toString();
-//
-//                    mProgressDialog.dismiss();
-//                    Toast.makeText(getContext(), "Item Added", Toast.LENGTH_LONG).show();
-//                    StorageReference imageRef3 = allItemReference.child(System.currentTimeMillis() + "." + GetFileExtension(imageUri));
-//                    imageRef3.putFile(imageUri);
-//                    Item newItem = new Item(name, productPrice, productQuantity, imgUri);
-//                    String imageUploadId = mReference.push().getKey();
-//                    mReference.child(mAuth.getCurrentUser().getUid()).child(imageUploadId).setValue(newItem);
-//                    allItems.child(imageUploadId).setValue(newItem);
-//                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-//                    transaction.replace(R.id.main_frame, home);
-//                    transaction.commit();
-//                }
-//            });
         } else {
             Toast.makeText(getContext(), "Please Select An Image", Toast.LENGTH_LONG).show();
         }

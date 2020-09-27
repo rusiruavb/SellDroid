@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -24,6 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class PaymentMethods extends Fragment {
 
     private RecyclerView paymentMethodRecycleView;
+    private TextView textViewTitle;
     private FirebaseAuth auth;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference reference = database.getReference().child("Payment_Methods");
@@ -38,6 +40,7 @@ public class PaymentMethods extends Fragment {
 
         auth = FirebaseAuth.getInstance();
         updatePaymentMethod = new UpdatePaymentMethod();
+        textViewTitle = view.findViewById(R.id.payment_methods_title);
         paymentMethodRecycleView = view.findViewById(R.id.payment_method_recycle_view);
         paymentMethodRecycleView.setHasFixedSize(true);
         paymentMethodRecycleView.setLayoutManager(new LinearLayoutManager(getContext()));

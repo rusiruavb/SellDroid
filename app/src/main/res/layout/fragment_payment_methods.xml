@@ -7,7 +7,7 @@
     tools:context=".PaymentMethods">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/payment_methods_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -30,7 +30,7 @@
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/payment_methods_title" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
