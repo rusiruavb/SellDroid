@@ -56,7 +56,6 @@ public class UserRegister extends AppCompatActivity {
         password2 = findViewById(R.id.register_conformPassword);
         registerButton = findViewById(R.id.register_button);
         registerAsSeller = findViewById(R.id.register_as_seller);
-        alreadyHaveAccount = findViewById(R.id.register_to_login);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,11 +122,5 @@ public class UserRegister extends AppCompatActivity {
             }
         });
 
-        alreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            }
-        });
     }
 }

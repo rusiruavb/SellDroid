@@ -2,7 +2,6 @@ package com.example.selldroid_final;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -51,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void userLogin() {
-        loginEmail = findViewById(R.id.login_seller_email);
-        loginPassword = findViewById(R.id.login_seller_password);
-        loginButton = findViewById(R.id.login_seller_button);
-        forgetPassword = findViewById(R.id.seller_foget_password);
-        createAccount = findViewById(R.id.create_seller_account);
+        loginEmail = findViewById(R.id.login_email);
+        loginPassword = findViewById(R.id.login_password);
+        loginButton = findViewById(R.id.login_button);
+        forgetPassword = findViewById(R.id.forget_password);
+        createAccount = findViewById(R.id.create_user_account);
         loginSeller = findViewById(R.id.login_as_seller);
 
         loginButton.setOnClickListener(new View.OnClickListener() {

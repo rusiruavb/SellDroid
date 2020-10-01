@@ -1,127 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context=".UserRegister">
+    android:background="@mipmap/login_full_background"
+    android:hapticFeedbackEnabled="false"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@drawable/user_register_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:orientation="vertical">
 
-            <TextView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/user_register"
-                android:textColor="@color/textColor"
-                android:textSize="32dp"
-                android:textStyle="bold" />
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:src="@drawable/register_user" />
+                <EditText
+                    android:id="@+id/register_name"
+                    android:layout_width="380dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginEnd="27dp"
+                    android:background="@mipmap/input_background"
+                    android:ems="10"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:paddingTop="60dp"
-                android:id="@+id/register_name"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="@string/user_register_name"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_person"
-                android:drawablePadding="12dp"
-                android:inputType="text"
-                android:maxLines="1"
-                android:padding="15dp" />
+                <EditText
+                    android:id="@+id/register_conformPassword"
+                    android:layout_width="380dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@mipmap/input_background"
+                    android:ems="10"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:hint="Conform Password"
+                    android:inputType="textPassword"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorWhite"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_password" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/register_email"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="@string/user_register_email"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_email"
-                android:drawablePadding="12dp"
-                android:inputType="textEmailAddress"
-                android:maxLines="1"
-                android:padding="15dp" />
+                <EditText
+                    android:id="@+id/register_password"
+                    android:layout_width="380dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@mipmap/input_background"
+                    android:ems="10"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorWhite"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_pNumber" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/register_pNumber"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="@string/user_register_phone"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_phone"
-                android:drawablePadding="12dp"
-                android:inputType="number"
-                android:maxLines="1"
-                android:padding="15dp" />
+                <Button
+                    android:id="@+id/register_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@mipmap/login_button_background"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="login"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_conformPassword" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/register_password"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="@string/user_register_pass"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_password"
-                android:drawablePadding="12dp"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:padding="15dp" />
+                <EditText
+                    android:id="@+id/register_email"
+                    android:layout_width="380dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="26dp"
+                    android:background="@mipmap/input_background"
+                    android:ems="10"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_name" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/register_conformPassword"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="@string/user_register_confirmPass"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_conform_password"
-                android:drawablePadding="12dp"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:padding="15dp" />
-            <Button
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:text="create new account"
-                android:textSize="18dp"
-                android:background="@drawable/button_background"
-                android:layout_margin="10dp"
-                android:width="45dp"
-                android:padding="15dp"
-                android:id="@+id/register_button"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Already Have Account"
-                android:gravity="center"
-                android:id="@+id/register_to_login"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Register As Seller"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:id="@+id/register_as_seller"/>
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="Create New Account"
+                    android:textColor="#F8F8F8"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/register_pNumber"
+                    android:layout_width="380dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@mipmap/input_background"
+                    android:ems="10"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:hint="Phone Number"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorWhite"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_email" />
+
+                <TextView
+                    android:id="@+id/register_as_seller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Register As Seller"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_button" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
-
     </ScrollView>
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -104,7 +104,7 @@ public class AddPaymentMethod extends Fragment {
                             dialog.dismiss();
                             Toast.makeText(getContext(), "Payment Method Added", Toast.LENGTH_SHORT).show();
                             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                            transaction.replace(R.id.main_frame, paymentMethods);
+                            transaction.replace(R.id.user_main_frame, paymentMethods);
                             transaction.addToBackStack(null);
                             transaction.commit();
                         } else {

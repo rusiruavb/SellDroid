@@ -174,7 +174,7 @@ public class AddProduct extends Fragment {
                             mReference.child(mAuth.getCurrentUser().getUid()).child(itemId).setValue(newItem);
 
                             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                            transaction.replace(R.id.main_frame, home);
+                            transaction.replace(R.id.seller_main_frame, home);
                             transaction.addToBackStack(null);
                             transaction.commit();
                         }

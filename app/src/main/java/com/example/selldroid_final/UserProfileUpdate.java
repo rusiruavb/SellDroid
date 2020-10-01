@@ -58,8 +58,6 @@ public class UserProfileUpdate extends Fragment {
         updateEmail = view.findViewById(R.id.update_user_email);
         updateUserName = view.findViewById(R.id.update_user_name);
         updateUserPhoneNumber = view.findViewById(R.id.update_user_phoneNum);
-        updatePassword = view.findViewById(R.id.update_user_password);
-        updateConformPassword = view.findViewById(R.id.update_user_conform_password);
         updateButton = view.findViewById(R.id.update_user_button);
         deleteButton = view.findViewById(R.id.delete_user_account);
         cancelUpdate = view.findViewById(R.id.cancel_user_update);
@@ -138,7 +136,7 @@ public class UserProfileUpdate extends Fragment {
                     Toast.makeText(getContext(), "Check Your Gmail", Toast.LENGTH_LONG).show();
 
                     FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.main_frame, new UserProfile());
+                    transaction.replace(R.id.user_main_frame, new UserProfile());
                     transaction.addToBackStack(null);
                     transaction.commit();
                 } else {

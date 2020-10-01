@@ -194,7 +194,7 @@ public class UpdateProduct extends Fragment {
                             Toast.makeText(getContext(), "Item Updated", Toast.LENGTH_LONG).show();
 
                             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                            transaction.replace(R.id.main_frame, home);
+                            transaction.replace(R.id.seller_main_frame, home);
                             transaction.addToBackStack(null);
                             transaction.commit();
                         }
@@ -219,7 +219,7 @@ public class UpdateProduct extends Fragment {
                 Toast.makeText(getContext(), "Item Deleted", Toast.LENGTH_LONG).show();
 
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.main_frame, sellerItems);
+                transaction.replace(R.id.seller_main_frame, sellerItems);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }

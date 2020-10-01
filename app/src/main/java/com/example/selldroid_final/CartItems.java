@@ -79,7 +79,7 @@ public class CartItems extends Fragment {
                             public void onComplete(@NonNull Task<Void> task) {
                                 System.out.println("Item Deleted");
                                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                                transaction.replace(R.id.main_frame, cartItems);
+                                transaction.replace(R.id.user_main_frame, cartItems);
                                 transaction.addToBackStack(null);
                                 transaction.commit();
                             }
@@ -133,7 +133,7 @@ public class CartItems extends Fragment {
                 bundle.putString("date", dateTime);
                 buyNow.setArguments(bundle);
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.main_frame, buyNow);
+                transaction.replace(R.id.user_main_frame, buyNow);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }

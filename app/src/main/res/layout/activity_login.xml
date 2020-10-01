@@ -1,117 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-
+    android:background="@mipmap/login_full_background"
     android:hapticFeedbackEnabled="false"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:background="@drawable/login_top_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="480dp"
-                android:layout_height="500dp"
-                android:background="@mipmap/login_card"
-                android:textAlignment="center">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <EditText
-                    android:id="@+id/login_seller_password"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:background="@mipmap/form_input"
-                    android:drawableStart="@drawable/ic_password"
-                    android:drawablePadding="12dp"
+                    android:id="@+id/login_password"
+                    android:layout_width="380dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@mipmap/input_background"
                     android:ems="10"
+                    android:fontFamily="@font/open_sans_bold"
                     android:hint="Password"
                     android:inputType="textPassword"
-                    android:paddingStart="15dp"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/login_seller_email" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="75dp"
-                    android:text="Welcome To SellDroid"
-                    android:textColor="@color/textColor"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <EditText
-                    android:id="@+id/login_seller_email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:background="@mipmap/form_input"
-                    android:drawableStart="@drawable/ic_email"
-                    android:drawablePadding="12dp"
-                    android:ems="10"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:paddingStart="15dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                    app:layout_constraintTop_toBottomOf="@+id/login_email" />
 
                 <Button
-                    android:id="@+id/login_seller_button"
+                    android:id="@+id/login_button"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="280dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/login_button"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@mipmap/login_button_background"
+                    android:fontFamily="@font/open_sans_bold"
                     android:text="login"
+                    android:textColor="#002E50"
+                    android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/login_seller_password" />
+                    app:layout_constraintTop_toBottomOf="@+id/login_password" />
+
+                <EditText
+                    android:id="@+id/login_email"
+                    android:layout_width="380dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@mipmap/input_background"
+                    android:ems="10"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.483"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/logo" />
 
                 <TextView
-                    android:id="@+id/seller_foget_password"
+                    android:id="@+id/forget_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="Fogot Password"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/login_seller_button" />
+                    app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
                 <TextView
-                    android:id="@+id/create_seller_account"
+                    android:id="@+id/create_user_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="8dp"
                     android:text="Create New Account"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/seller_foget_password" />
+                    app:layout_constraintTop_toBottomOf="@+id/forget_password" />
 
                 <TextView
                     android:id="@+id/login_as_seller"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="8dp"
                     android:text="Login As Seller"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/create_seller_account" />
-
+                    app:layout_constraintTop_toBottomOf="@+id/create_user_account" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

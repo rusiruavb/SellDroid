@@ -53,7 +53,7 @@ public class SellerLogin extends AppCompatActivity {
 
     private void sellerLogin() {
         sellerEmail = findViewById(R.id.login_seller_email);
-        sellerPassword = findViewById(R.id.login_seller_password);
+        sellerPassword = findViewById(R.id.login_seller_email);
         sellerLoginButton = findViewById(R.id.login_seller_button);
 
         sellerLoginButton.setOnClickListener(new View.OnClickListener() {

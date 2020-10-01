@@ -1,105 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/login_full_background"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".UserRegister">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@drawable/add_product_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:fillViewport="false"
+        android:isScrollContainer="true">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
                 android:gravity="center"
                 android:text="Add New Payment Method"
-                android:layout_marginBottom="50dp"
-                android:textColor="@color/textColor"
+                android:textColor="@color/textColorWhite"
                 android:textSize="32dp"
                 android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/add_payment_name"
                 android:layout_width="380dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
+                android:background="@mipmap/input_background"
+                android:fontFamily="@font/open_sans_bold"
                 android:hint="@string/nameOnTheCard"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_person"
-                android:drawablePadding="12dp"
                 android:inputType="text"
                 android:maxLines="1"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite" />
 
             <mostafa.ma.saleh.gmail.com.editcredit.EditCredit
                 android:id="@+id/add_payment_card_number"
                 android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                app:disabledCards="visa|amex"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
-                android:hint="@string/cardNumber"
-                android:background="@drawable/custom_input"
+                android:background="@mipmap/input_background"
                 android:drawableStart="@drawable/ic_card"
                 android:drawablePadding="12dp"
-                app:drawableGravity="start"
+                android:fontFamily="@font/open_sans_bold"
+                android:hint="@string/cardNumber"
                 android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite"
+                app:disabledCards="visa|amex"
+                app:drawableGravity="start"
                 app:separator="spaces" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/add_payment_cvv"
                 android:layout_width="380dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
+                android:background="@mipmap/input_background"
+                android:fontFamily="@font/open_sans_bold"
                 android:hint="@string/cvv"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_cvv"
-                android:drawablePadding="12dp"
                 android:inputType="number"
                 android:maxLines="1"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/add_payment_validation_period"
                 android:layout_width="380dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
+                android:background="@mipmap/input_background"
+                android:fontFamily="@font/open_sans_bold"
                 android:hint="@string/validationPeriod"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_calender"
-                android:drawablePadding="12dp"
                 android:inputType="date"
                 android:maxLines="1"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite" />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/add_payment_phone_number"
                 android:layout_width="380dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
+                android:background="@mipmap/input_background"
+                android:fontFamily="@font/open_sans_bold"
                 android:hint="@string/paymentPhoneNumber"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_phone"
-                android:drawablePadding="12dp"
                 android:inputType="number"
                 android:maxLines="1"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite" />
+
             <Button
                 android:id="@+id/add_payment_button"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
                 style="?android:attr/borderlessButtonStyle"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
                 android:layout_margin="10dp"
                 android:width="45dp"
-                android:background="@drawable/button_background"
+                android:background="@mipmap/login_button_background"
                 android:padding="15dp"
                 android:text="@string/addPaymentButton"
+                android:textColor="@color/textColorWhite"
                 android:textSize="18dp" />
+
             <TextView
                 android:id="@+id/add_payment_cancel"
                 android:layout_width="match_parent"
@@ -107,6 +134,7 @@
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="CANCEL" />
+
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

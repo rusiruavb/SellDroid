@@ -88,7 +88,7 @@ public class BuyNow extends Fragment {
                                             cartReference.child(auth.getCurrentUser().getUid()).removeValue();
                                             Toast.makeText(getContext(), "Payment Success", Toast.LENGTH_SHORT).show();
                                             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                                            transaction.replace(R.id.main_frame, new UserProfile());
+                                            transaction.replace(R.id.user_main_frame, new UserProfile());
                                             transaction.addToBackStack(null);
                                             transaction.commit();
                                         } else {

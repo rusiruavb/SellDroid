@@ -10,21 +10,24 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/payment_item"
         android:layout_width="match_parent"
-        android:layout_height="135dp"
+        android:layout_height="140dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="5dp"
-        android:background="@mipmap/single_cart_item_background">
+        android:background="@drawable/payment_item_background">
 
         <TextView
             android:id="@+id/payment_item_validation_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/open_sans"
             android:text="Loading..."
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/textColor"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/display_cart_product_image"
             app:layout_constraintTop_toBottomOf="@+id/payment_item_phone_number" />
 
@@ -34,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="5dp"
+            android:fontFamily="@font/open_sans"
             android:text="Loading..."
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/textColor"
@@ -47,7 +51,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:src="@drawable/ic_payment"
+            android:src="@drawable/credit_card_image"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -57,6 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:fontFamily="@font/open_sans_bold"
             android:text="Loading..."
             android:textAppearance="?android:textAppearanceLarge"
             android:textColor="@color/textColor"
@@ -70,6 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:fontFamily="@font/open_sans"
             android:text="Loading..."
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/textColor"

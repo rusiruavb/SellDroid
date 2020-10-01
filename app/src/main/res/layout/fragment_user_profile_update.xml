@@ -1,125 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/login_full_background"
     android:gravity="center"
-    tools:context=".UserProfileUpdate">
+    android:hapticFeedbackEnabled="false"
+    tools:context=".UserRegister">
+
+    <LinearLayout
+        android:layout_width="490dp"
+        android:layout_height="520dp"
+        android:layout_marginEnd="32dp"
+        android:background="@mipmap/login_top_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-            <TextView
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Update My Profile"
-                android:textColor="@color/textColor"
-                android:textSize="32dp"
-                android:layout_marginBottom="30dp"
-                android:gravity="center"
-                android:textStyle="bold"/>
+                android:layout_height="800dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Loading..."
-                android:textColor="@color/textColor"
-                android:textSize="24dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:id="@+id/update_user_email"
-                />
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:layout_margin="10dp"
-                android:drawableStart="@drawable/ic_person"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:background="@mipmap/form_input"
-                android:hint="Name"
-                android:maxLines="1"
-                android:inputType="text"
-                android:id="@+id/update_user_name"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/update_user_phoneNum"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="Phone Number"
-                android:drawableStart="@drawable/ic_phone"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:background="@mipmap/form_input"
-                android:maxLines="1"
-                android:inputType="text"
-                android:padding="15dp" />
+                    <EditText
+                        android:id="@+id/update_user_name"
+                        android:layout_width="380dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="27dp"
+                        android:background="@mipmap/input_background"
+                        android:ems="10"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:hint="Name"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/update_user_email" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/update_user_password"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@mipmap/form_input"
-                android:drawableStart="@drawable/ic_password"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:hint="Enter New Password"
-                android:inputType="text"
-                android:maxLines="1"
-                android:padding="15dp" />
+                    <Button
+                        android:id="@+id/update_user_button"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="200dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="60dp"
+                        android:background="@drawable/update_account_background"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:text="update"
+                        android:textColor="@color/textColorWhite"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/update_user_phoneNum" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:layout_margin="10dp"
-                android:hint="Conform Password"
-                android:drawableStart="@drawable/ic_conform_password"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:background="@mipmap/form_input"
-                android:maxLines="1"
-                android:inputType="text"
-                android:id="@+id/update_user_conform_password"/>
+                    <Button
+                        android:id="@+id/delete_user_account"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="200dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/delete_account_background"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:text="delete"
+                        android:textColor="@color/textColorWhite"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/update_user_button" />
 
-            <Button
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:text="Update"
-                android:textSize="18dp"
-                android:background="@drawable/button_background"
-                android:layout_margin="10dp"
-                android:width="45dp"
-                android:padding="15dp"
-                android:id="@+id/update_user_button"/>
-            <Button
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:text="DELETE ACCOUNT"
-                android:textSize="18dp"
-                android:background="@drawable/button_delete_background"
-                android:layout_margin="10dp"
-                android:width="45dp"
-                android:padding="15dp"
-                android:id="@+id/delete_user_account"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CANCEL UPDATE"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:id="@+id/cancel_user_update"/>
+                    <EditText
+                        android:id="@+id/update_user_phoneNum"
+                        android:layout_width="380dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="26dp"
+                        android:background="@mipmap/input_background"
+                        android:ems="10"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:hint="Phone Number"
+                        android:inputType="textEmailAddress"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/update_user_name" />
 
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="120dp"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:text="Update Your Profile"
+                        android:textColor="#F8F8F8"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/update_user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="center"
+                        android:text="Loading..."
+                        android:textColor="@color/textColorWhite"
+                        android:textSize="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                    <TextView
+                        android:id="@+id/cancel_user_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Cancel"
+                        android:textColor="@color/textColorWhite"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/delete_user_account" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

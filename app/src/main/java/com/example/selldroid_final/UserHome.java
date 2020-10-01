@@ -11,18 +11,20 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class UserHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class UserHome extends AppCompatActivity {
 
-    private DrawerLayout mDrawerLayout;
-    private NavigationView mNavigationView;
+    private BottomNavigationView bottomNavigation;
     private Toolbar mToolbar;
-    private ActionBarDrawerToggle mToggle;
     private FrameLayout mFrameLayout;
 
     private UserProfile userProfileFragment;
@@ -38,89 +40,70 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
         setContentView(R.layout.activity_user_home);
 
         auth = FirebaseAuth.getInstance();
-        mDrawerLayout = findViewById(R.id.drawer_layout);
-        mNavigationView = findViewById(R.id.navigation_view);
-        mToolbar = findViewById(R.id.toolbar);
-        mToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        bottomNavigation = findViewById(R.id.user_bottom_navigation);
+        mFrameLayout = findViewById(R.id.user_main_frame);
+        mToolbar = findViewById(R.id.user_toolbar);
 
         mToolbar.setTitle("SellDroid");
         setSupportActionBar(mToolbar);
-        mDrawerLayout.addDrawerListener(mToggle);
-        mToggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        mNavigationView.setNavigationItemSelectedListener(this);
 
         userProfileFragment = new UserProfile();
         updateUserProfileFragment = new UserProfileUpdate();
         addPayment = new AddPaymentMethod();
         homePage = new HomePage();
         setFragment(homePage);
+
+        bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_user_payment_methods:
+                        setFragment(new PaymentMethods());
+                        return true;
+                    case R.id.nav_user_add_payment:
+                        setFragment(new AddPaymentMethod());
+                        return true;
+                    case R.id.nav_user_cart:
+                        setFragment(new CartItems());
+                        return true;
+                    case R.id.nav_user_home:
+                        setFragment(new HomePage());
+                        return true;
+                    case R.id.nav_user_profile:
+                        setFragment(new UserProfile());
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
     }
 
-    private void setFragment(Fragment fragment) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_frame,fragment);
-        transaction.commit();
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.user_top_menu, menu);
+        return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(mToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-        if(drawerLayout.isDrawerOpen(GravityCompat.END)) {
-            drawerLayout.closeDrawer(GravityCompat.END);
-        } else {
-            super.onBackPressed();
-        }
-    }
-
-    public void displaySelectedListner(int itemId) {
-        Fragment fragment = null;
-        switch (itemId) {
-            case R.id.nav_user_account:
-                fragment = new UserProfile();
-                break;
-            case R.id.nav_user_account_update:
-                fragment = new UserProfileUpdate();
-                break;
-            case R.id.nav_add_payment:
-                fragment = new AddPaymentMethod();
-                break;
-            case R.id.nav_user_cart:
-                fragment = new CartItems();
-                break;
-            case R.id.nav_home:
-                fragment = new HomePage();
-                break;
-            case R.id.nav_payment_methods:
-                fragment = new PaymentMethods();
-                break;
+        switch (item.getItemId()) {
+            case R.id.nav_user_update_profile:
+                setFragment(new UserProfileUpdate());
+                return true;
             case R.id.nav_user_logout:
                 auth.signOut();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                break;
+                return true;
+            default:
+                return false;
         }
-
-        if (fragment != null) {
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.main_frame, fragment);
-            transaction.commit();
-        }
-
-        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-        drawerLayout.closeDrawer(GravityCompat.START);
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        displaySelectedListner(item.getItemId());
-        return false;
+    private void setFragment(Fragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.user_main_frame,fragment);
+        transaction.commit();
     }
 }

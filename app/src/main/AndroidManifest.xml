@@ -13,7 +13,7 @@
         <activity android:name=".SetNewSellerPassword"></activity>
         <activity android:name=".SetNewUserPassword" />
         <activity android:name=".SellerHome" />
-        <activity android:name=".UserHome" />
+        <activity android:name=".UserHome" android:windowSoftInputMode="adjustPan" />
         <activity android:name=".SellerRegister" />
         <activity android:name=".UserRegister" />
         <activity android:name=".SellerLogin" />

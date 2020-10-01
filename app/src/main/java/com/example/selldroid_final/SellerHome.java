@@ -13,109 +13,63 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
-public class SellerHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class SellerHome extends AppCompatActivity {
 
-    private DrawerLayout sellerDrawer;
-    private NavigationView sellerNavigation;
+    private BottomNavigationView bottomNavigationView;
     private Toolbar sellerToolBar;
     private FrameLayout sellerFrameLayout;
-    private ActionBarDrawerToggle toggle;
 
     private SellerProfile sellerProfile;
-    private SellerProfileUpdate sellerUpdate;
-    private ProductPage productPage;
-    private SelectPayment selectPay;
+    private AddProduct addProduct;
     private HomePage homePage;
+    private SellerItems sellerItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_home);
 
-        // Assign layout variables
-        sellerDrawer = findViewById(R.id.seller_drawer_layout);
-        sellerNavigation = findViewById(R.id.seller_navigation_view);
+        bottomNavigationView = findViewById(R.id.seller_bottom_navigation);
+        sellerFrameLayout = findViewById(R.id.seller_main_frame);
         sellerToolBar = findViewById(R.id.toolbar);
-        toggle = new ActionBarDrawerToggle(this,sellerDrawer,R.string.open,R.string.close);
-        //
+
+        sellerProfile = new SellerProfile();
+        homePage = new HomePage();
+        addProduct = new AddProduct();
+        sellerItems = new SellerItems();
+
         sellerToolBar.setTitle("SellDroid Seller");
         setSupportActionBar(sellerToolBar);
-        sellerDrawer.addDrawerListener(toggle);
-        toggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        sellerNavigation.setNavigationItemSelectedListener(this);
 
-        // Create fragment objects
-        sellerProfile = new SellerProfile();
-        sellerUpdate = new SellerProfileUpdate();
-        productPage = new ProductPage();
-        selectPay = new SelectPayment();
-        homePage = new HomePage();
+        setFragment(sellerItems);
 
-        setFragment(homePage);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_seller_home:
+                        setFragment(homePage);
+                        return true;
+                    case R.id.nav_seller_add_product:
+                        setFragment(addProduct);
+                        return true;
+                    case R.id.nav_seller_profile:
+                        setFragment(sellerProfile);
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
     }
 
     private void setFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_frame,fragment);
+        transaction.replace(R.id.seller_main_frame,fragment);
         transaction.addToBackStack(null);
         transaction.commit();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(toggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawerLayout = findViewById(R.id.seller_drawer_layout);
-        if(drawerLayout.isDrawerOpen(GravityCompat.END)) {
-            drawerLayout.closeDrawer(GravityCompat.END);
-        } else {
-            super.onBackPressed();
-        }
-    }
-
-    public void displaySelectedListner(int itemId) {
-        Fragment fragment = null;
-        switch (itemId) {
-            case R.id.nav_seller_account:
-                fragment = new SellerProfile();
-                break;
-            case R.id.nav_seller_account_update:
-                fragment = new SellerProfileUpdate();
-                break;
-            case R.id.nav_add_product:
-                fragment = new AddProduct();
-                break;
-            case R.id.nav_seller_items:
-                fragment = new SellerItems();
-                break;
-            case R.id.nav_home:
-                fragment = new HomePage();
-                break;
-        }
-
-        if (fragment != null) {
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.main_frame, fragment);
-            transaction.addToBackStack(null);
-            transaction.commit();
-        }
-
-        DrawerLayout drawerLayout = findViewById(R.id.seller_drawer_layout);
-        drawerLayout.closeDrawer(GravityCompat.START);
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        displaySelectedListner(item.getItemId());
-        return false;
     }
 }

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#F35D38</color>
-    <color name="colorPrimaryDark">#F35D38</color>
-    <color name="colorAccent">#F35D38</color>
+    <color name="colorPrimary">#005694</color>
+    <color name="colorPrimaryDark">#005694</color>
+    <color name="colorAccent">#005694</color>
+
+    <color name="bottomNavigationColor">#005694</color>
+
+    <color name="colorSecondary">#339C7D</color>
 
     <color name="textColor">#000000</color>
     <color name="buttonBgColor">#00BCD4</color>

@@ -82,7 +82,7 @@ public class PaymentMethods extends Fragment {
                         updatePaymentMethod.setArguments(bundle);
 
                         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.main_frame, updatePaymentMethod);
+                        transaction.replace(R.id.user_main_frame, updatePaymentMethod);
                         transaction.addToBackStack(null);
                         transaction.commit();
 

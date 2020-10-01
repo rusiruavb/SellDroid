@@ -64,7 +64,7 @@ public class SellerItems extends Fragment {
                         updateProduct.setArguments(bundle);
 
                         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.main_frame, updateProduct);
+                        transaction.replace(R.id.seller_main_frame, updateProduct);
                         transaction.addToBackStack(null);
                         transaction.commit();
                     }

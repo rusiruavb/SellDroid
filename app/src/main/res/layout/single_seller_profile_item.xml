@@ -10,7 +10,7 @@
     android:layout_height="50dp"
     android:divider="@null"
     android:showDividers="none"
-    android:background="@drawable/seller_profile_single_item"
+    android:background="@drawable/seller_item_background"
     android:orientation="vertical">
 
 

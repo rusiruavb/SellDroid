@@ -64,7 +64,7 @@ public class HomePage extends Fragment {
                         productPage.setArguments(bundle);
 
                         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.main_frame, productPage);
+                        transaction.replace(R.id.user_main_frame, productPage);
                         transaction.addToBackStack(null);
                         transaction.commit();
                     }

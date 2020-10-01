@@ -7,37 +7,38 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="5dp"
-        android:background="@mipmap/single_cart_item_background">
+        android:background="@drawable/cart_item_background">
 
         <Button
             android:id="@+id/cart_item_remove_button"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/ic_remove"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/cart_item_quantity"
+            app:layout_constraintTop_toBottomOf="@+id/single_payment_item_name" />
 
         <TextView
             android:id="@+id/cart_item_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
             android:textAppearance="?android:textAppearanceLarge"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/cart_item_add_button"
-            app:layout_constraintEnd_toStartOf="@+id/cart_item_remove_button"
+            app:layout_constraintStart_toEndOf="@+id/cart_item_add_button"
             app:layout_constraintTop_toTopOf="@+id/cart_item_remove_button" />
 
         <Button
@@ -45,11 +46,11 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/ic_add"
+            android:background="@drawable/ic_add_round"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/cart_item_quantity"
+            app:layout_constraintStart_toEndOf="@+id/display_cart_product_image"
             app:layout_constraintTop_toTopOf="@+id/cart_item_remove_button"
             app:layout_constraintVertical_bias="0.0" />
 
@@ -85,8 +86,8 @@
             android:layout_marginStart="8dp"
             android:text="Loading..."
             android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="@color/textColor"
-            android:textSize="24sp"
+            android:textColor="@color/textColorWhite"
+            android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/display_cart_product_image"
             app:layout_constraintTop_toTopOf="@+id/display_cart_product_image" />
@@ -99,7 +100,7 @@
             android:layout_marginTop="8dp"
             android:text="Rs."
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@color/textColor"
+            android:textColor="@color/textColorWhite"
             app:layout_constraintStart_toEndOf="@+id/display_cart_product_image"
             app:layout_constraintTop_toBottomOf="@+id/single_payment_method_number" />
 
@@ -110,7 +111,7 @@
             android:layout_marginStart="2dp"
             android:text="TextView"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@color/textColor"
+            android:textColor="@color/textColorWhite"
             app:layout_constraintStart_toEndOf="@+id/seller_price"
             app:layout_constraintTop_toTopOf="@+id/seller_price" />
 
