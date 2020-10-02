@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,8 +35,6 @@ public class UserProfileUpdate extends Fragment {
 
     private EditText updateUserName;
     private EditText updateUserPhoneNumber;
-    private EditText updatePassword;
-    private EditText updateConformPassword;
     private Button updateButton;
     private Button deleteButton;
     private TextView cancelUpdate;
@@ -43,24 +42,29 @@ public class UserProfileUpdate extends Fragment {
     private ProgressDialog dialog;
     private String profileImageUrl;
     private String email;
-    private String currentPassword;
+    private String password;
 
     private FirebaseAuth auth;
+    private FirebaseUser firebaseUser;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference userReference = database.getReference().child("Users");
+    private DatabaseReference user;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user_profile_update, container, false);
 
-        auth = FirebaseAuth.getInstance();
-        dialog = new ProgressDialog(getContext());
         updateEmail = view.findViewById(R.id.update_user_email);
         updateUserName = view.findViewById(R.id.update_user_name);
         updateUserPhoneNumber = view.findViewById(R.id.update_user_phoneNum);
         updateButton = view.findViewById(R.id.update_user_button);
         deleteButton = view.findViewById(R.id.delete_user_account);
         cancelUpdate = view.findViewById(R.id.cancel_user_update);
+
+        auth = FirebaseAuth.getInstance();
+        dialog = new ProgressDialog(getContext());
+        user = userReference.child(auth.getCurrentUser().getUid());
+        firebaseUser = auth.getCurrentUser();
 
         displayUserData();
 
@@ -89,8 +93,7 @@ public class UserProfileUpdate extends Fragment {
                 updateUserPhoneNumber.setText(snapshot.child("phoneNumber").getValue().toString());
                 updateEmail.setText(snapshot.child("email").getValue().toString());
                 profileImageUrl = snapshot.child("profileImage").getValue().toString();
-                currentPassword = snapshot.child("passowrd").getValue().toString();
-                email = snapshot.child("email").getValue().toString();
+                //email = snapshot.child("email").getValue().toString();
             }
 
             @Override
@@ -99,11 +102,16 @@ public class UserProfileUpdate extends Fragment {
     }
 
     private void updateUser() {
+
+        dialog.setMessage("Updating Profile...");
+        dialog.show();
+
         final String name = updateUserName.getText().toString().trim();
-        final String password = updatePassword.getText().toString().trim();
-        String conformPassword = updateConformPassword.getText().toString().trim();
         final String phone = updateUserPhoneNumber.getText().toString().trim();
-        final String image = profileImageUrl;
+        final String email = updateEmail.getText().toString().trim();
+        //final String image = profileImageUrl;
+
+        User updatedUser = new User(name,email,phone,password,profileImageUrl);
 
         if (TextUtils.isEmpty(name)) {
             updateUserName.setError("Name is required");
@@ -113,38 +121,20 @@ public class UserProfileUpdate extends Fragment {
             updateUserPhoneNumber.setError("Phone number is required");
             return;
         }
-        if (TextUtils.isEmpty(password)) {
-            updatePassword.setError("Password is required");
-            return;
-        }
-        if (TextUtils.isEmpty(conformPassword)) {
-            updateConformPassword.setError("Please conform the password");
-        }
-        if (!TextUtils.equals(password, conformPassword)) {
-            updateConformPassword.setError("Password is not matched");
-            return;
-        }
 
-        dialog.setMessage("Updating Profile...");
-        dialog.show();
-
-        auth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+        user.setValue(updatedUser).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
                     dialog.dismiss();
-                    Toast.makeText(getContext(), "Check Your Gmail", Toast.LENGTH_LONG).show();
-
-                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.user_main_frame, new UserProfile());
-                    transaction.addToBackStack(null);
-                    transaction.commit();
+                    Toast.makeText(getContext(), "Update Success", Toast.LENGTH_SHORT).show();
                 } else {
                     dialog.dismiss();
-                    Toast.makeText(getContext(), "Profile Update Failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Update Failed", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+ 
     }
 
     private void deleteUser() {
