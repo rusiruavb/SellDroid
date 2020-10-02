@@ -75,7 +75,6 @@ public class SellerProfile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_seller_profile, container, false);
 
-        sellerLogoutButton = view.findViewById(R.id.seller_logout_button);
         sellerProfile = view.findViewById(R.id.user_image);
         displaySellerName = view.findViewById(R.id.display_seller_name);
         displaySellerCompany = view.findViewById(R.id.display_seller_company);
@@ -137,7 +136,6 @@ public class SellerProfile extends Fragment {
         });
 
         loadProfile();
-        sellerLogout();
         adapter.startListening();
         sellingItemsRecycleView.setAdapter(adapter);
         return view;
@@ -199,17 +197,6 @@ public class SellerProfile extends Fragment {
         ContentResolver contentResolver = getActivity().getContentResolver();
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
-    }
-
-    private void sellerLogout() {
-        sellerLogoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                auth.signOut();
-                Toast.makeText(getContext(), "You are now sign out", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getContext(), SellerLogin.class));
-            }
-        });
     }
 
     @Override

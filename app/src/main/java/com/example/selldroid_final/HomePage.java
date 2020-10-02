@@ -44,7 +44,7 @@ public class HomePage extends Fragment {
                 holder.itemName.setText(model.getName());
                 holder.itemPrice.setText(model.getPrice());
                 holder.itemQuantity.setText(model.getQuantity());
-                Picasso.get().load(model.getImageUri()).into(holder.itemImage);
+                Picasso.get().load(model.getImageUri()).centerCrop().fit().into(holder.itemImage);
 
                 holder.itemCard.setOnClickListener(new View.OnClickListener() {
                     @Override

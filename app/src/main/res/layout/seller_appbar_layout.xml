@@ -10,7 +10,7 @@
         android:layout_height="wrap_content">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            app:menu="@menu/user_bottom_navigation"
+            app:menu="@menu/user_top_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:titleTextColor="@color/textColor">

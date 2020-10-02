@@ -145,7 +145,7 @@ public class CartItems extends Fragment {
         return view;
     }
 
-    private void calculateTotal() {
+    public void calculateTotal() {
         reference.child(auth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

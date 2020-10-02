@@ -37,9 +37,9 @@ public class SellerLogin extends AppCompatActivity {
         dialog = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
 
-        if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), SellerHome.class));
-        }
+//        if (auth.getCurrentUser() != null) {
+//            startActivity(new Intent(getApplicationContext(), SellerHome.class));
+//        }
 
         sellerForgetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +53,7 @@ public class SellerLogin extends AppCompatActivity {
 
     private void sellerLogin() {
         sellerEmail = findViewById(R.id.login_seller_email);
-        sellerPassword = findViewById(R.id.login_seller_email);
+        sellerPassword = findViewById(R.id.login_seller_password);
         sellerLoginButton = findViewById(R.id.login_seller_button);
 
         sellerLoginButton.setOnClickListener(new View.OnClickListener() {

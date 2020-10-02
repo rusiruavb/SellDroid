@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+
             android:gravity="center">
 
             <TextView
@@ -27,7 +28,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/update_product_name"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/ProductName"
@@ -39,7 +40,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/update_product_price"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/PRice"
@@ -51,7 +52,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/update_product_quantity"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/Quantity"
@@ -63,7 +64,7 @@
 
             <MultiAutoCompleteTextView
                 android:id="@+id/update_product_description"
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="Description"
@@ -74,15 +75,15 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/update_product_image"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
                 android:src="@drawable/ic_add_product"/>
 
             <Button
                 android:id="@+id/update_product_button"
-                android:layout_width="match_parent"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:width="45dp"
@@ -93,7 +94,7 @@
 
             <Button
                 android:id="@+id/delete_product_button"
-                android:layout_width="match_parent"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:width="45dp"
@@ -106,6 +107,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cancel"
                 android:gravity="center"
+                android:layout_marginBottom="60dp"
                 android:id="@+id/update_product_cancel"/>
         </LinearLayout>
     </ScrollView>

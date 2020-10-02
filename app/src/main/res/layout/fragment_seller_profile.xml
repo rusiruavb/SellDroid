@@ -7,38 +7,16 @@
     tools:context="SellerProfile">
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="41dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <Button
-            android:id="@+id/seller_logout_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@mipmap/logout_button"
-            android:text="Logout"
-            android:textColor="@color/textColorWhite"
-            android:textSize="20dp" />
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="490dp"
+        android:layout_height="500dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -48,9 +26,7 @@
                 android:id="@+id/seller_profile_items_recycle_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="70dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +56,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@mipmap/profile_header_background"
+        android:background="@drawable/profile_header_background"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -95,7 +71,7 @@
                 android:id="@+id/user_image"
                 android:layout_width="132dp"
                 android:layout_height="129dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="18dp"
                 android:layout_marginTop="28dp"
                 android:src="@drawable/ic_person_profile"
                 app:civ_border_color="#FF000000"
@@ -107,10 +83,11 @@
                 android:id="@+id/display_seller_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/open_sans_bold"
                 android:text="Loading..."
-                android:textColor="@color/textColor"
+                android:textColor="@color/textColorWhite"
                 android:textFontWeight="900"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -121,10 +98,11 @@
                 android:id="@+id/display_seller_company"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="6dp"
+                android:fontFamily="@font/open_sans"
                 android:text="Loading..."
-                android:textColor="@color/textColor"
+                android:textColor="@color/textColorWhite"
                 android:textSize="20dp"
                 app:layout_constraintStart_toEndOf="@+id/user_image"
                 app:layout_constraintTop_toBottomOf="@+id/display_seller_name" />
@@ -133,10 +111,11 @@
                 android:id="@+id/display_seller_phone_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="6dp"
+                android:fontFamily="@font/open_sans"
                 android:text="loading..."
-                android:textColor="@color/textColor"
+                android:textColor="@color/textColorWhite"
                 android:textSize="20dp"
                 app:layout_constraintStart_toEndOf="@+id/user_image"
                 app:layout_constraintTop_toBottomOf="@+id/display_seller_company" />
