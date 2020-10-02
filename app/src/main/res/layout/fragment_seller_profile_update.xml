@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:width="45dp"
-                android:background="@drawable/button_background"
+                android:background="@drawable/button_background_blue"
                 android:padding="15dp"
                 android:text="update"
                 android:textSize="18dp" />

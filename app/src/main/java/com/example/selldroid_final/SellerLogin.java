@@ -24,6 +24,7 @@ public class SellerLogin extends AppCompatActivity {
     private EditText sellerPassword;
     private Button sellerLoginButton;
     private TextView sellerForgetPassword;
+    private TextView sellerCreateAccount;
     private ProgressDialog dialog;
 
     private FirebaseAuth auth;
@@ -33,6 +34,11 @@ public class SellerLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_login);
+        sellerForgetPassword = findViewById(R.id.seller_forget_password);
+        sellerCreateAccount =findViewById(R.id.create_seller_account);
+        dialog = new ProgressDialog(this);
+        auth = FirebaseAuth.getInstance();
+
         sellerForgetPassword = findViewById(R.id.seller_forget_password);
         dialog = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
@@ -47,6 +53,15 @@ public class SellerLogin extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), SetNewSellerPassword.class));
             }
         });
+        sellerCreateAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SellerRegister.class));
+            }
+        });
+
+
+
 
         sellerLogin();
     }

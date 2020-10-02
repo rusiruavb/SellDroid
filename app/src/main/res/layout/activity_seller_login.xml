@@ -54,7 +54,7 @@
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="200dp"
                     android:layout_height="60dp"
-                    android:layout_marginTop="120dp"
+                    android:layout_marginTop="32dp"
                     android:background="@mipmap/login_button_background"
                     android:fontFamily="@font/open_sans_bold"
                     android:text="login"
