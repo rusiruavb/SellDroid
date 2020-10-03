@@ -41,8 +41,10 @@ public class UserProfileUpdate extends Fragment {
     private TextView updateEmail;
     private ProgressDialog dialog;
     private String profileImageUrl;
-    private String email;
     private String password;
+    private TextView email1;
+    private String email2;
+
 
     private FirebaseAuth auth;
     private FirebaseUser firebaseUser;
@@ -54,12 +56,13 @@ public class UserProfileUpdate extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user_profile_update, container, false);
 
-        updateEmail = view.findViewById(R.id.update_user_email);
+        updateEmail = view.findViewById(R.id.user_email_update);
         updateUserName = view.findViewById(R.id.update_user_name);
         updateUserPhoneNumber = view.findViewById(R.id.update_user_phoneNum);
         updateButton = view.findViewById(R.id.update_user_button);
         deleteButton = view.findViewById(R.id.delete_user_account);
         cancelUpdate = view.findViewById(R.id.cancel_user_update);
+        email1 = view.findViewById(R.id.update_user_email);
 
         auth = FirebaseAuth.getInstance();
         dialog = new ProgressDialog(getContext());
@@ -93,7 +96,10 @@ public class UserProfileUpdate extends Fragment {
                 updateUserPhoneNumber.setText(snapshot.child("phoneNumber").getValue().toString());
                 updateEmail.setText(snapshot.child("email").getValue().toString());
                 profileImageUrl = snapshot.child("profileImage").getValue().toString();
-                //email = snapshot.child("email").getValue().toString();
+                email1.setText(snapshot.child("email").getValue().toString());
+
+                email2 = snapshot.child("email").getValue().toString();
+
             }
 
             @Override
