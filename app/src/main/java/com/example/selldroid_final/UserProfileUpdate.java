@@ -148,13 +148,17 @@ public class UserProfileUpdate extends Fragment {
         dialog.setMessage("Deleting Profile...");
         dialog.show();
 
-        auth.getCurrentUser().delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+        firebaseUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
+                    user.removeValue();
+
                     dialog.dismiss();
                     Toast.makeText(getContext(), "Profile Deleted", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getContext(), UserRegister.class));
+                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    transaction.remove(new UserProfile()).commit();
+                   // startActivity(new Intent(getContext(), UserRegister.class));
                 } else {
                     dialog.dismiss();
                     Toast.makeText(getContext(), "Profile Update Failed", Toast.LENGTH_SHORT).show();
