@@ -95,9 +95,10 @@ public class UserProfileUpdate extends Fragment {
                 updateUserName.setText(snapshot.child("name").getValue().toString());
                 updateUserPhoneNumber.setText(snapshot.child("phoneNumber").getValue().toString());
                 updateEmail.setText(snapshot.child("email").getValue().toString());
-                profileImageUrl = snapshot.child("profileImage").getValue().toString();
                 email1.setText(snapshot.child("email").getValue().toString());
 
+                profileImageUrl = snapshot.child("profileImage").getValue().toString();
+                password = snapshot.child("passowrd").getValue().toString();
                 email2 = snapshot.child("email").getValue().toString();
 
             }
@@ -117,7 +118,7 @@ public class UserProfileUpdate extends Fragment {
         final String email = updateEmail.getText().toString().trim();
         //final String image = profileImageUrl;
 
-        User updatedUser = new User(name,email,phone,password,profileImageUrl);
+        User updatedUser = new User(name,email,phone, password,profileImageUrl);
 
         if (TextUtils.isEmpty(name)) {
             updateUserName.setError("Name is required");
