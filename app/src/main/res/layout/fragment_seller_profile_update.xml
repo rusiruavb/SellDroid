@@ -3,11 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SellerProfileUpdate"
-    android:gravity="center">
+    android:background="#F8FFFFFF"
+    android:gravity="center"
+    tools:context=".SellerProfileUpdate">
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,10 +32,10 @@
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="@string/nameBM"
+                android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/ic_person"
                 android:drawablePadding="12dp"
-                android:background="@drawable/custom_input"
+                android:hint="@string/nameBM"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -41,10 +45,10 @@
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="@string/email_addressBM"
+                android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="12dp"
-                android:background="@drawable/custom_input"
+                android:hint="@string/email_addressBM"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -54,25 +58,26 @@
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:ems="10"
-                android:hint="@string/enter_company_shop_nameBM"
+                android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/ic_address"
                 android:drawablePadding="12dp"
-                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="@string/enter_company_shop_nameBM"
                 android:inputType="textShortMessage"
                 android:maxLines="1"
                 android:padding="15dp" />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/update_seller_address"
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_address"
+                android:drawablePadding="12dp"
                 android:ems="10"
                 android:hint="@string/enter_company_shop_addressBM"
                 android:inputType="textPersonName"
-                android:drawableStart="@drawable/ic_address"
-                android:drawablePadding="12dp"
-                android:background="@drawable/custom_input"
                 android:maxLines="1"
                 android:padding="15dp" />
 
@@ -81,10 +86,10 @@
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="@string/phone_numberBM"
+                android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/ic_phone"
                 android:drawablePadding="12dp"
-                android:background="@drawable/custom_input"
+                android:hint="@string/phone_numberBM"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp" />
@@ -99,6 +104,7 @@
                 android:padding="15dp"
                 android:text="update"
                 android:textSize="18dp" />
+
             <Button
                 android:id="@+id/delete_seller_account"
                 android:layout_width="250dp"
@@ -109,6 +115,7 @@
                 android:padding="15dp"
                 android:text="DELETE ACCOUNT"
                 android:textSize="18dp" />
+
             <TextView
                 android:id="@+id/cancel_seller_update"
                 android:layout_width="match_parent"

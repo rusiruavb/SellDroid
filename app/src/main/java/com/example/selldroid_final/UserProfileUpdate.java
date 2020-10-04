@@ -41,8 +41,10 @@ public class UserProfileUpdate extends Fragment {
     private TextView updateEmail;
     private ProgressDialog dialog;
     private String profileImageUrl;
-    private String email;
     private String password;
+    private TextView email1;
+    private String email2;
+
 
     private FirebaseAuth auth;
     private FirebaseUser firebaseUser;
@@ -54,12 +56,13 @@ public class UserProfileUpdate extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user_profile_update, container, false);
 
-        updateEmail = view.findViewById(R.id.update_user_email);
+        updateEmail = view.findViewById(R.id.user_email_update);
         updateUserName = view.findViewById(R.id.update_user_name);
         updateUserPhoneNumber = view.findViewById(R.id.update_user_phoneNum);
         updateButton = view.findViewById(R.id.update_user_button);
         deleteButton = view.findViewById(R.id.delete_user_account);
         cancelUpdate = view.findViewById(R.id.cancel_user_update);
+        email1 = view.findViewById(R.id.update_user_email);
 
         auth = FirebaseAuth.getInstance();
         dialog = new ProgressDialog(getContext());
@@ -92,8 +95,12 @@ public class UserProfileUpdate extends Fragment {
                 updateUserName.setText(snapshot.child("name").getValue().toString());
                 updateUserPhoneNumber.setText(snapshot.child("phoneNumber").getValue().toString());
                 updateEmail.setText(snapshot.child("email").getValue().toString());
+                email1.setText(snapshot.child("email").getValue().toString());
+
                 profileImageUrl = snapshot.child("profileImage").getValue().toString();
-                //email = snapshot.child("email").getValue().toString();
+                password = snapshot.child("passowrd").getValue().toString();
+                email2 = snapshot.child("email").getValue().toString();
+
             }
 
             @Override
@@ -111,7 +118,7 @@ public class UserProfileUpdate extends Fragment {
         final String email = updateEmail.getText().toString().trim();
         //final String image = profileImageUrl;
 
-        User updatedUser = new User(name,email,phone,password,profileImageUrl);
+        User updatedUser = new User(name,email,phone, password,profileImageUrl);
 
         if (TextUtils.isEmpty(name)) {
             updateUserName.setError("Name is required");
@@ -142,13 +149,17 @@ public class UserProfileUpdate extends Fragment {
         dialog.setMessage("Deleting Profile...");
         dialog.show();
 
-        auth.getCurrentUser().delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+        firebaseUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
+                    user.removeValue();
+
                     dialog.dismiss();
                     Toast.makeText(getContext(), "Profile Deleted", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getContext(), UserRegister.class));
+                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    transaction.remove(new UserProfile()).commit();
+                   // startActivity(new Intent(getContext(), UserRegister.class));
                 } else {
                     dialog.dismiss();
                     Toast.makeText(getContext(), "Profile Update Failed", Toast.LENGTH_SHORT).show();
