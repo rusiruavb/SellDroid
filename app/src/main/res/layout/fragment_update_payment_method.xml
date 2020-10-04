@@ -51,7 +51,7 @@
                 android:textStyle="italic" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/add_payment_name"
+                android:id="@+id/update_payment_method_name"
                 android:layout_width="380dp"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
@@ -63,21 +63,25 @@
                 android:padding="15dp"
                 android:textAlignment="center" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/add_payment_card_number"
+            <mostafa.ma.saleh.gmail.com.editcredit.EditCredit
+                android:id="@+id/update_payment_method_card_number"
                 android:layout_width="380dp"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
                 android:background="@mipmap/input_background"
+                android:drawableStart="@drawable/ic_card"
+                android:drawablePadding="12dp"
                 android:fontFamily="@font/open_sans_bold"
                 android:hint="@string/cardNumber"
-                android:inputType="number"
-                android:maxLines="1"
                 android:padding="15dp"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite"
+                app:disabledCards="visa|amex"
+                app:drawableGravity="start"
+                app:separator="spaces" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/add_payment_cvv"
+                android:id="@+id/update_payment_method_cvv"
                 android:layout_width="380dp"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
@@ -90,7 +94,7 @@
                 android:textAlignment="center" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/add_payment_validation_period"
+                android:id="@+id/update_payment_method_validation_period"
                 android:layout_width="380dp"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
@@ -103,7 +107,7 @@
                 android:textAlignment="center" />
 
             <Button
-                android:id="@+id/add_payment_button"
+                android:id="@+id/update_payment_button"
                 android:layout_width="180dp"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
@@ -115,7 +119,7 @@
                 android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/register_to_login"
+                android:id="@+id/cancel_update_payment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
