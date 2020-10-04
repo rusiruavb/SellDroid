@@ -79,16 +79,13 @@ public class PaymentMethods extends Fragment {
                         bundle.putString("cardNumber", model.getCardNumber());
                         bundle.putString("cvv", model.getCardCVV());
                         bundle.putString("phoneNumber", model.getPhoneNumber());
+                        bundle.putString("validationPeriod", model.getValidationPeriod());
                         updatePaymentMethod.setArguments(bundle);
 
                         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                         transaction.replace(R.id.user_main_frame, updatePaymentMethod);
                         transaction.addToBackStack(null);
                         transaction.commit();
-
-                        // last day I finished here
-                        // need to work on UpdatePaymentMethod fragment and
-                        // retrieve seller profile and user profile details
                     }
                 });
             }
