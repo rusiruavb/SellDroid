@@ -117,7 +117,7 @@ public class UpdatePaymentMethod extends Fragment {
 
         PaymentMethod updatePayment = new PaymentMethod(cardId, holderName, number, cvv, validation, phone);
 
-        paymentReference.child(auth.getCurrentUser().getUid()).setValue(updatePayment).addOnCompleteListener(new OnCompleteListener<Void>() {
+        paymentReference.child(auth.getCurrentUser().getUid()).child(cardId).setValue(updatePayment).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/login_full_background"
     android:gravity="center"
+    android:id="@+id/fragment_user_profile_update"
     android:hapticFeedbackEnabled="false"
     tools:context=".UserRegister">
 

@@ -157,9 +157,9 @@ public class UserProfileUpdate extends Fragment {
 
                     dialog.dismiss();
                     Toast.makeText(getContext(), "Profile Deleted", Toast.LENGTH_SHORT).show();
-                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    transaction.remove(new UserProfile()).commit();
-                   // startActivity(new Intent(getContext(), UserRegister.class));
+//                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                    transaction.remove(new UserProfile()).commit();
+                    startActivity(new Intent(getContext(), UserRegister.class));
                 } else {
                     dialog.dismiss();
                     Toast.makeText(getContext(), "Profile Update Failed", Toast.LENGTH_SHORT).show();

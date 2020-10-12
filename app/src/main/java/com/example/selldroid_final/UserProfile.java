@@ -115,22 +115,26 @@ public class UserProfile extends Fragment {
     }
 
     private void displayUserData() {
-        reference.child(auth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Picasso.get().load(snapshot.child("profileImage").getValue().toString()).into(userProfile);
-                userName.setText(snapshot.child("name").getValue().toString());
-                userEmail.setText(snapshot.child("email").getValue().toString());
+        if (auth.getCurrentUser() != null) {
+            reference.child(auth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    Picasso.get().load(snapshot.child("profileImage").getValue().toString()).into(userProfile);
+                    userName.setText(snapshot.child("name").getValue().toString());
+                    userEmail.setText(snapshot.child("email").getValue().toString());
 
-                name = snapshot.child("name").getValue().toString();
-                email = snapshot.child("email").getValue().toString();
-                password = snapshot.child("passowrd").getValue().toString();
-                phoneNumber = snapshot.child("phoneNumber").getValue().toString();
-            }
+                    name = snapshot.child("name").getValue().toString();
+                    email = snapshot.child("email").getValue().toString();
+                    password = snapshot.child("passowrd").getValue().toString();
+                    phoneNumber = snapshot.child("phoneNumber").getValue().toString();
+                }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) { }
-        });
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) { }
+            });
+        } else {
+            startActivity(new Intent(getContext(), UserRegister.class));
+        }
     }
 
     @Override

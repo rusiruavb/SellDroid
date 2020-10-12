@@ -61,7 +61,8 @@
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="15dp"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite" />
 
             <mostafa.ma.saleh.gmail.com.editcredit.EditCredit
                 android:id="@+id/update_payment_method_card_number"
@@ -91,7 +92,8 @@
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="15dp"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/update_payment_method_validation_period"
@@ -104,7 +106,8 @@
                 android:inputType="date"
                 android:maxLines="1"
                 android:padding="15dp"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite" />
 
             <Button
                 android:id="@+id/update_payment_button"
